@@ -1,0 +1,980 @@
+symbol,company_name,sector,industry,exchange,beta,average_volume_90_days,has_dividend,ipo_year,market_cap_category
+NVDA,NVIDIA CORP,Technology,Semiconductors,NMS,2.375,181708429,Yes,,Large
+AAPL,APPLE INC,Technology,Consumer Electronics,NMS,1.116,48051409,Yes,,Large
+MSFT,MICROSOFT CORP,Technology,Software - Infrastructure,NMS,1.108,36612644,Yes,,Large
+AMZN,AMAZON COM INC,Consumer Cyclical,Internet Retail,NMS,1.42,50968045,No,,Large
+GOOGL,ALPHABET INC CLASS A,Communication Services,Internet Content & Information,NMS,1.112,34545572,Yes,,Large
+AVGO,BROADCOM INC,Technology,Semiconductors,NMS,1.257,26714381,Yes,,Large
+GOOG,ALPHABET INC CLASS C,Communication Services,Internet Content & Information,NMS,1.112,22411400,Yes,,Large
+META,META PLATFORMS INC CLASS A,Communication Services,Internet Content & Information,NMS,1.279,16101585,Yes,,Large
+TSLA,TESLA INC,Consumer Cyclical,Auto Manufacturers,NMS,1.926,61215768,No,,Large
+JPM,JPMORGAN CHASE & CO,Financial Services,Banks - Diversified,NYQ,1.059,11375534,Yes,,Large
+LLY,ELI LILLY,Healthcare,Drug Manufacturers - General,NYQ,0.434,3237739,Yes,,Large
+XOM,EXXON MOBIL CORP,Energy,Oil & Gas Integrated,NYQ,0.348,22894309,Yes,,Large
+JNJ,JOHNSON & JOHNSON,Healthcare,Drug Manufacturers - General,NYQ,0.326,8902009,Yes,,Large
+WMT,WALMART INC,Consumer Defensive,Discount Stores,NMS,0.657,31340090,Yes,,Large
+V,VISA INC CLASS A,Financial Services,Credit Services,NYQ,0.791,8213406,Yes,,Large
+COST,COSTCO WHOLESALE CORP,Consumer Defensive,Discount Stores,NMS,0.993,2227747,Yes,,Large
+MU,MICRON TECHNOLOGY INC,Technology,Semiconductors,NMS,1.606,40597616,Yes,,Large
+NFLX,NETFLIX INC,Communication Services,Entertainment,NMS,1.714,49590103,No,,Large
+MA,MASTERCARD INC CLASS A,Financial Services,Credit Services,NYQ,0.836,3961565,Yes,,Large
+ABBV,ABBVIE INC,Healthcare,Drug Manufacturers - General,NYQ,0.334,7419298,Yes,,Large
+CVX,CHEVRON CORP,Energy,Oil & Gas Integrated,NYQ,0.587,13381649,Yes,,Large
+AMD,ADVANCED MICRO DEVICES INC,Technology,Semiconductors,NMS,2.022,38294001,No,,Large
+PG,PROCTER & GAMBLE,Consumer Defensive,Household & Personal Products,NYQ,0.34,11732649,Yes,,Large
+CAT,CATERPILLAR INC,Industrials,Farm & Heavy Construction Machinery,NYQ,1.531,2868803,Yes,,Large
+HD,HOME DEPOT INC,Consumer Cyclical,Home Improvement Retail,NYQ,1.044,4311181,Yes,,Large
+BAC,BANK OF AMERICA CORP,Financial Services,Banks - Diversified,NYQ,1.263,42913208,Yes,,Large
+PLTR,PALANTIR TECHNOLOGIES INC CLASS A,Technology,Software - Infrastructure,NMS,1.739,49606845,No,,Large
+CSCO,CISCO SYSTEMS INC,Technology,Communication Equipment,NMS,0.829,24275449,Yes,,Large
+GE,GE AEROSPACE,Industrials,Aerospace & Defense,NYQ,1.369,5769777,Yes,,Large
+MRK,MERCK & CO INC,Healthcare,Drug Manufacturers - General,NYQ,0.264,12035044,Yes,,Large
+KO,COCA-COLA,Consumer Defensive,Beverages - Non-Alcoholic,NYQ,0.332,18615906,Yes,,Large
+AMAT,APPLIED MATERIAL INC,Technology,Semiconductor Equipment & Materials,NMS,1.634,7790706,Yes,,Large
+LRCX,LAM RESEARCH CORP,Technology,Semiconductor Equipment & Materials,NMS,1.787,11978385,Yes,,Large
+RTX,RTX CORP,Industrials,Aerospace & Defense,NYQ,0.406,6328968,Yes,,Large
+GS,GOLDMAN SACHS GROUP INC,Financial Services,Capital Markets,NYQ,1.336,2477796,Yes,,Large
+UNH,UNITEDHEALTH GROUP INC,Healthcare,Healthcare Plans,NYQ,0.38,9793718,Yes,,Large
+WFC,WELLS FARGO,Financial Services,Banks - Diversified,NYQ,1.071,17716795,Yes,,Large
+PM,PHILIP MORRIS INTERNATIONAL INC,Consumer Defensive,Tobacco,NYQ,0.395,5438540,Yes,,Large
+ORCL,ORACLE CORP,Technology,Software - Infrastructure,NYQ,1.648,27470863,Yes,,Large
+GEV,GE VERNOVA INC,Industrials,Specialty Industrial Machinery,NYQ,1.151,2896606,Yes,,Large
+LIN,LINDE PLC,Basic Materials,Specialty Chemicals,NMS,0.797,2733496,Yes,,Large
+IBM,INTERNATIONAL BUSINESS MACHINES CO,Technology,Information Technology Services,NYQ,0.706,5886670,Yes,,Large
+MCD,MCDONALDS CORP,Consumer Cyclical,Restaurants,NYQ,0.496,3364618,Yes,,Large
+INTC,INTEL CORPORATION CORP,Technology,Semiconductors,NMS,1.375,107905416,No,,Large
+PEP,PEPSICO INC,Consumer Defensive,Beverages - Non-Alcoholic,NMS,0.375,8051809,Yes,,Large
+VZ,VERIZON COMMUNICATIONS INC,Communication Services,Telecom Services,NYQ,0.281,32224396,Yes,,Large
+KLAC,KLA CORP,Technology,Semiconductor Equipment & Materials,NMS,1.448,1136811,Yes,,Large
+C,CITIGROUP INC,Financial Services,Banks - Diversified,NYQ,1.131,15466665,Yes,,Large
+T,AT&T INC,Communication Services,Telecom Services,NYQ,0.576,46075096,Yes,,Large
+NEE,NEXTERA ENERGY INC,Utilities,Utilities - Regulated Electric,NYQ,0.749,9968818,Yes,,Large
+AMGN,AMGEN INC,Healthcare,Drug Manufacturers - General,NMS,0.425,2845767,Yes,,Large
+MS,MORGAN STANLEY,Financial Services,Capital Markets,NYQ,1.207,7625870,Yes,,Large
+TMO,THERMO FISHER SCIENTIFIC INC,Healthcare,Diagnostics & Research,NYQ,0.971,2407460,Yes,,Large
+TJX,TJX INC,Consumer Cyclical,Apparel Retail,NYQ,0.727,5250449,Yes,,Large
+TXN,TEXAS INSTRUMENT INC,Technology,Semiconductors,NMS,0.979,7805173,Yes,,Large
+ABT,ABBOTT LABORATORIES,Healthcare,Medical Devices,NYQ,0.744,11480818,Yes,,Large
+GILD,GILEAD SCIENCES INC,Healthcare,Drug Manufacturers - General,NMS,0.374,7322680,Yes,,Large
+DIS,WALT DISNEY,Communication Services,Entertainment,NYQ,1.443,11894345,Yes,,Large
+CRM,SALESFORCE INC,Technology,Software - Application,NYQ,1.307,12850339,Yes,,Large
+ISRG,INTUITIVE SURGICAL INC,Healthcare,Medical Instruments & Supplies,NMS,1.68,1953970,No,,Large
+AXP,AMERICAN EXPRESS,Financial Services,Credit Services,NYQ,1.152,3742068,Yes,,Large
+PFE,PFIZER INC,Healthcare,Drug Manufacturers - General,NYQ,0.412,46178524,Yes,,Large
+COP,CONOCOPHILLIPS,Energy,Oil & Gas E&P,NYQ,0.279,10006009,Yes,,Large
+ADI,ANALOG DEVICES INC,Technology,Semiconductors,NMS,1.021,4125447,Yes,,Large
+BA,BOEING,Industrials,Aerospace & Defense,NYQ,1.128,7527859,No,,Large
+APH,AMPHENOL CORP CLASS A,Technology,Electronic Components,NYQ,1.214,10491511,Yes,,Large
+SCHW,CHARLES SCHWAB CORP,Financial Services,Capital Markets,NYQ,0.919,10689544,Yes,,Large
+BLK,BLACKROCK INC,Financial Services,Asset Management,NYQ,1.487,877878,Yes,,Large
+UNP,UNION PACIFIC CORP,Industrials,Railroads,NYQ,0.952,3440501,Yes,,Large
+HON,HONEYWELL INTERNATIONAL INC,Industrials,Conglomerates,NMS,0.904,4398126,Yes,,Large
+UBER,UBER TECHNOLOGIES INC,Technology,Software - Application,NYQ,1.215,20566557,No,,Large
+ETN,EATON PLC,Industrials,Specialty Industrial Machinery,NYQ,1.167,2934229,Yes,,Large
+DE,DEERE,Industrials,Farm & Heavy Construction Machinery,NYQ,0.961,1627483,Yes,,Large
+WELL,WELLTOWER INC,Real Estate,REIT - Healthcare Facilities,NYQ,0.813,3261173,Yes,,Large
+QCOM,QUALCOMM INC,Technology,Semiconductors,NMS,1.267,11523654,Yes,,Large
+LOW,LOWES COMPANIES INC,Consumer Cyclical,Home Improvement Retail,NYQ,0.935,2867344,Yes,,Large
+SPGI,S&P GLOBAL INC,Financial Services,Financial Data & Stock Exchanges,NYQ,1.221,2625981,Yes,,Large
+ANET,ARISTA NETWORKS INC,Technology,Computer Hardware,NYQ,1.46,8035416,No,,Large
+PANW,PALO ALTO NETWORKS INC,Technology,Software - Infrastructure,NMS,0.822,10562914,No,,Large
+LMT,LOCKHEED MARTIN CORP,Industrials,Aerospace & Defense,NYQ,0.197,1879877,Yes,,Large
+BMY,BRISTOL MYERS SQUIBB,Healthcare,Drug Manufacturers - General,NYQ,0.266,13578754,Yes,,Large
+NEM,NEWMONT,Basic Materials,Gold,NYQ,0.389,10876467,Yes,,Large
+PLD,PROLOGIS REIT INC,Real Estate,REIT - Industrial,NYQ,1.416,3536854,Yes,,Large
+ACN,ACCENTURE PLC CLASS A,Technology,Information Technology Services,NYQ,1.251,6736393,Yes,,Large
+DHR,DANAHER CORP,Healthcare,Diagnostics & Research,NYQ,0.964,4170578,Yes,,Large
+CB,CHUBB,Financial Services,Insurance - Property & Casualty,NYQ,0.489,1775540,Yes,,Large
+INTU,INTUIT INC,Technology,Software - Application,NMS,1.282,3963990,Yes,,Large
+PH,PARKER-HANNIFIN CORP,Industrials,Specialty Industrial Machinery,NYQ,1.218,762045,Yes,,Large
+VRTX,VERTEX PHARMACEUTICALS INC,Healthcare,Biotechnology,NMS,0.315,1522618,No,,Large
+PGR,PROGRESSIVE CORP,Financial Services,Insurance - Property & Casualty,NYQ,0.29,3499109,Yes,,Large
+COF,CAPITAL ONE FINANCIAL CORP,Financial Services,Credit Services,NYQ,1.139,5776206,Yes,,Large
+SYK,STRYKER CORP,Healthcare,Medical Devices,NYQ,0.869,2107672,Yes,,Large
+GLW,CORNING INC,Technology,Electronic Components,NYQ,1.022,11557496,Yes,,Large
+MO,ALTRIA GROUP INC,Consumer Defensive,Tobacco,NYQ,0.434,10340978,Yes,,Large
+MDT,MEDTRONIC PLC,Healthcare,Medical Devices,NYQ,0.729,8541529,Yes,,Large
+NOW,SERVICENOW INC,Technology,Software - Application,NYQ,1.019,18937632,No,,Large
+MCK,MCKESSON CORP,Healthcare,Medical Distribution,NYQ,0.354,764913,Yes,,Large
+CME,CME GROUP INC CLASS A,Financial Services,Financial Data & Stock Exchanges,NMS,0.26,2293155,Yes,,Large
+SO,SOUTHERN,Utilities,Utilities - Regulated Electric,NYQ,0.41,6147873,Yes,,Large
+SBUX,STARBUCKS CORP,Consumer Cyclical,Restaurants,NMS,0.928,9345344,Yes,,Large
+DUK,DUKE ENERGY CORP,Utilities,Utilities - Regulated Electric,NYQ,0.466,4605690,Yes,,Large
+CMCSA,COMCAST CORP CLASS A,Communication Services,Telecom Services,NMS,0.78,35042367,Yes,,Large
+WDC,WESTERN DIGITAL CORP,Technology,Computer Hardware,NMS,1.853,10070504,Yes,,Large
+SNDK,SANDISK CORP,Technology,Computer Hardware,NMS,,19751721,No,,Large
+ADBE,ADOBE INC,Technology,Software - Application,NMS,1.532,5889459,No,,Large
+VRT,VERTIV HOLDINGS CLASS A,Industrials,Electrical Equipment & Parts,NYQ,2.076,7859372,Yes,,Large
+TMUS,T MOBILE US INC,Communication Services,Telecom Services,NMS,0.412,6263000,Yes,,Large
+EQIX,EQUINIX REIT INC,Real Estate,REIT - Specialty,NMS,1.031,654000,Yes,,Large
+CRWD,CROWDSTRIKE HOLDINGS INC CLASS A,Technology,Software - Infrastructure,NMS,1.124,3946936,No,,Large
+HWM,HOWMET AEROSPACE INC,Industrials,Aerospace & Defense,NYQ,1.188,2701981,Yes,,Large
+TT,TRANE TECHNOLOGIES PLC,Industrials,Building Products & Equipment,NYQ,1.188,1640901,Yes,,Large
+NOC,NORTHROP GRUMMAN CORP,Industrials,Aerospace & Defense,NYQ,0.007,983565,Yes,,Large
+APP,APPLOVIN CORP CLASS A,Communication Services,Advertising Agencies,NMS,2.505,6126318,No,,Large
+BSX,BOSTON SCIENTIFIC CORP,Healthcare,Medical Devices,NYQ,0.7,16202696,No,,Large
+CVS,CVS HEALTH CORP,Healthcare,Healthcare Plans,NYQ,0.464,8872518,Yes,,Large
+MRVL,MARVELL TECHNOLOGY INC,Technology,Semiconductors,NMS,1.989,18248209,Yes,,Large
+ICE,INTERCONTINENTAL EXCHANGE INC,Financial Services,Financial Data & Stock Exchanges,NYQ,1.051,3949932,Yes,,Large
+GD,GENERAL DYNAMICS CORP,Industrials,Aerospace & Defense,NYQ,0.372,1430044,Yes,,Large
+WMB,WILLIAMS INC,Energy,Oil & Gas Midstream,NYQ,0.649,7455555,Yes,,Large
+FCX,FREEPORT MCMORAN INC,Basic Materials,Copper,NYQ,1.438,21085114,Yes,,Large
+CEG,CONSTELLATION ENERGY CORP,Utilities,Utilities - Independent Power Producers,NMS,1.107,3804450,Yes,,Large
+WM,WASTE MANAGEMENT INC,Industrials,Waste Management,NYQ,0.533,2282462,Yes,,Large
+BX,BLACKSTONE INC,Financial Services,Asset Management,NYQ,1.794,8459078,Yes,,Large
+MRSH,MARSH INC,Financial Services,Insurance Brokers,NYQ,0.731,3183675,Yes,,Large
+BK,BANK OF NEW YORK MELLON CORP,Financial Services,Banks - Diversified,NYQ,1.076,3804814,Yes,,Large
+USB,US BANCORP,Financial Services,Banks - Regional,NYQ,1.041,11339177,Yes,,Large
+JCI,JOHNSON CONTROLS INTERNATIONAL PLC,Industrials,Building Products & Equipment,NYQ,1.389,5252185,Yes,,Large
+PWR,QUANTA SERVICES INC,Industrials,Engineering & Construction,NYQ,1.109,1150983,Yes,,Large
+ADP,AUTOMATIC DATA PROCESSING INC,Technology,Software - Application,NMS,0.854,3621716,Yes,,Large
+PNC,PNC FINANCIAL SERVICES GROUP INC,Financial Services,Banks - Regional,NYQ,0.974,2808747,Yes,,Large
+AMT,AMERICAN TOWER REIT CORP,Real Estate,REIT - Specialty,NYQ,0.93,3286070,Yes,,Large
+REGN,REGENERON PHARMACEUTICALS INC,Healthcare,Biotechnology,NMS,0.397,757191,Yes,,Large
+CSX,CSX CORP,Industrials,Railroads,NMS,1.263,14125975,Yes,,Large
+ORLY,OREILLY AUTOMOTIVE INC,Consumer Cyclical,Auto Parts,NMS,0.599,6309985,No,,Large
+MMM,3M,Industrials,Conglomerates,NYQ,1.131,4231457,Yes,,Large
+EOG,EOG RESOURCES INC,Energy,Oil & Gas E&P,NYQ,0.333,5434644,Yes,,Large
+HCA,HCA HEALTHCARE INC,Healthcare,Medical Care Facilities,NYQ,1.342,1132208,Yes,,Large
+FDX,FEDEX CORP,Industrials,Integrated Freight & Logistics,NYQ,1.281,2020891,Yes,,Large
+CDNS,CADENCE DESIGN SYSTEMS INC,Technology,Software - Application,NMS,1.025,2561926,No,,Large
+CMI,CUMMINS INC,Industrials,Specialty Industrial Machinery,NYQ,1.127,972832,Yes,,Large
+SNPS,SYNOPSYS INC,Technology,Software - Infrastructure,NMS,1.156,2230837,No,,Large
+ITW,ILLINOIS TOOL INC,Industrials,Specialty Industrial Machinery,NYQ,1.123,1477104,Yes,,Large
+SLB,SLB NV,Energy,Oil & Gas Equipment & Services,NYQ,0.709,21377991,Yes,,Large
+SHW,SHERWIN WILLIAMS,Basic Materials,Specialty Chemicals,NYQ,1.244,1830678,Yes,,Large
+EMR,EMERSON ELECTRIC,Industrials,Specialty Industrial Machinery,NYQ,1.243,3505542,Yes,,Large
+MDLZ,MONDELEZ INTERNATIONAL INC CLASS A,Consumer Defensive,Confectioners,NMS,0.366,11292232,Yes,,Large
+MAR,MARRIOTT INTERNATIONAL INC CLASS A,Consumer Cyclical,Lodging,NMS,1.101,1679363,Yes,,Large
+VLO,VALERO ENERGY CORP,Energy,Oil & Gas Refining & Marketing,NYQ,0.734,3995742,Yes,,Large
+SPOT,SPOTIFY TECHNOLOGY SA,Communication Services,Internet Content & Information,NYQ,1.717,2923429,No,,Large
+MSI,MOTOROLA SOLUTIONS INC,Technology,Communication Equipment,NYQ,0.96,1171575,Yes,,Large
+UPS,UNITED PARCEL SERVICE INC CLASS B,Industrials,Integrated Freight & Logistics,NYQ,1.054,6640413,Yes,,Large
+CRH,CRH PUBLIC LIMITED PLC,Basic Materials,Building Materials,NYQ,1.241,5323240,Yes,,Large
+RCL,ROYAL CARIBBEAN GROUP LTD,Consumer Cyclical,Travel Services,NYQ,1.926,2550344,Yes,,Large
+MPC,MARATHON PETROLEUM CORP,Energy,Oil & Gas Refining & Marketing,NYQ,0.577,2671795,Yes,,Large
+AEP,AMERICAN ELECTRIC POWER INC,Utilities,Utilities - Regulated Electric,NMS,0.573,3617536,Yes,,Large
+PSX,PHILLIPS,Energy,Oil & Gas Refining & Marketing,NYQ,0.871,3131262,Yes,,Large
+CI,CIGNA,Healthcare,Healthcare Plans,NYQ,0.234,1785762,Yes,,Large
+HLT,HILTON WORLDWIDE HOLDINGS INC,Consumer Cyclical,Lodging,NYQ,1.123,1981562,Yes,,Large
+ROST,ROSS STORES INC,Consumer Cyclical,Apparel Retail,NMS,0.927,2642090,Yes,,Large
+CL,COLGATE-PALMOLIVE,Consumer Defensive,Household & Personal Products,NYQ,0.264,7153693,Yes,,Large
+MCO,MOODYS CORP,Financial Services,Financial Data & Stock Exchanges,NYQ,1.442,1378459,Yes,,Large
+GM,GENERAL MOTORS,Consumer Cyclical,Auto Manufacturers,NYQ,1.356,8496070,Yes,,Large
+AON,AON PLC CLASS A,Financial Services,Insurance Brokers,NYQ,0.825,1483375,Yes,,Large
+ECL,ECOLAB INC,Basic Materials,Specialty Chemicals,NYQ,0.979,1440719,Yes,,Large
+LHX,L3HARRIS TECHNOLOGIES INC,Industrials,Aerospace & Defense,NYQ,0.746,1566008,Yes,,Large
+ELV,ELEVANCE HEALTH INC,Healthcare,Healthcare Plans,NYQ,0.468,1938539,Yes,,Large
+NSC,NORFOLK SOUTHERN CORP,Industrials,Railroads,NYQ,1.303,1284824,Yes,,Large
+APD,AIR PRODUCTS AND CHEMICALS INC,Basic Materials,Specialty Chemicals,NYQ,0.864,1520727,Yes,,Large
+NET,CLOUDFLARE INC CLASS A,Technology,Software - Infrastructure,NYQ,2.028,4676906,No,,Large
+KMI,KINDER MORGAN INC,Energy,Oil & Gas Midstream,NYQ,0.648,14758231,Yes,,Large
+SRE,SEMPRA,Utilities,Utilities - Diversified,NYQ,0.7,3979721,Yes,,Large
+WBD,WARNER BROS. DISCOVERY INC SERIES,Communication Services,Entertainment,NMS,1.675,26476373,No,,Large
+TRV,TRAVELERS COMPANIES INC,Financial Services,Insurance - Property & Casualty,NYQ,0.502,1658904,Yes,,Large
+KKR,KKR AND CO INC,Financial Services,Asset Management,NYQ,2.013,7809673,Yes,,Large
+DLR,DIGITAL REALTY TRUST REIT INC,Real Estate,REIT - Specialty,NYQ,1.133,2049500,Yes,,Large
+SPG,SIMON PROPERTY GROUP REIT INC,Real Estate,REIT - Retail,NYQ,1.397,1740132,Yes,,Large
+PCAR,PACCAR INC,Industrials,Farm & Heavy Construction Machinery,NMS,1.046,3219906,Yes,,Large
+BKR,BAKER HUGHES CLASS A,Energy,Oil & Gas Equipment & Services,NMS,0.879,10215101,Yes,,Large
+CTAS,CINTAS CORP,Industrials,Specialty Business Services,NMS,0.944,2189096,Yes,,Large
+TFC,TRUIST FINANCIAL CORP,Financial Services,Banks - Regional,NYQ,0.861,10089885,Yes,,Large
+CIEN,CIENA CORP,Technology,Communication Equipment,NYQ,1.09,3483611,No,,Large
+LNG,CHENIERE ENERGY INC,Energy,Oil & Gas Midstream,NYQ,0.238,2827237,Yes,,Large
+COR,CENCORA INC,Healthcare,Medical Distribution,NYQ,0.646,1347631,Yes,,Large
+CTVA,CORTEVA INC,Basic Materials,Agricultural Inputs,NYQ,0.721,4257786,Yes,,Large
+O,REALTY INCOME REIT CORP,Real Estate,REIT - Retail,NYQ,0.774,6627685,Yes,,Large
+DASH,DOORDASH INC CLASS A,Consumer Cyclical,Internet Retail,NMS,1.902,5097090,No,,Large
+OKE,ONEOK INC,Energy,Oil & Gas Midstream,NYQ,0.88,5161062,Yes,,Large
+AJG,ARTHUR J GALLAGHER,Financial Services,Insurance Brokers,NYQ,0.672,2474788,Yes,,Large
+TGT,TARGET CORP,Consumer Defensive,Discount Stores,NYQ,1.105,6458209,Yes,,Large
+LITE,LUMENTUM HOLDINGS INC,Technology,Communication Equipment,NMS,1.412,6043929,No,,Large
+ALL,ALLSTATE CORP,Financial Services,Insurance - Property & Casualty,NYQ,0.206,1712731,Yes,,Large
+FAST,FASTENAL,Industrials,Industrial Distribution,NMS,0.862,8784311,Yes,,Large
+D,DOMINION ENERGY INC,Utilities,Utilities - Regulated Electric,NYQ,0.67,5591291,Yes,,Large
+HOOD,ROBINHOOD MARKETS INC CLASS A,Financial Services,Capital Markets,NMS,2.479,29461993,No,,Large
+DELL,DELL TECHNOLOGIES INC CLASS C,Technology,Computer Hardware,NYQ,1.036,8949322,Yes,,Large
+ABNB,AIRBNB INC CLASS A,Consumer Cyclical,Travel Services,NMS,1.163,4620767,No,,Large
+NKE,NIKE INC CLASS B,Consumer Cyclical,Footwear & Accessories,NYQ,1.319,17521988,Yes,,Large
+MPWR,MONOLITHIC POWER SYSTEMS INC,Technology,Semiconductors,NMS,1.49,603772,Yes,,Large
+VST,VISTRA CORP,Utilities,Utilities - Independent Power Producers,NYQ,1.45,5590267,Yes,,Large
+ZTS,ZOETIS INC CLASS A,Healthcare,Drug Manufacturers - Specialty & Generic,NYQ,0.954,4491534,Yes,,Large
+TRGP,TARGA RESOURCES CORP,Energy,Oil & Gas Midstream,NYQ,0.853,1508234,Yes,,Large
+AU,ANGLOGOLD ASHANTI PLC,Basic Materials,Gold,NYQ,0.551,3253767,Yes,,Large
+AFL,AFLAC INC,Financial Services,Insurance - Life,NYQ,0.65,2429672,Yes,,Large
+ADSK,AUTODESK INC,Technology,Software - Application,NMS,1.467,2261103,No,,Large
+EA,ELECTRONIC ARTS INC,Communication Services,Electronic Gaming & Multimedia,NMS,0.754,2605349,Yes,,Large
+SNOW,SNOWFLAKE INC,Technology,Software - Application,NYQ,1.212,6045711,No,,Large
+AME,AMETEK INC,Industrials,Specialty Industrial Machinery,NYQ,1.013,1412186,Yes,,Large
+ETR,ENTERGY CORP,Utilities,Utilities - Regulated Electric,NYQ,0.602,2810260,Yes,,Large
+MNST,MONSTER BEVERAGE CORP,Consumer Defensive,Beverages - Non-Alcoholic,NMS,0.437,6240719,No,,Large
+CAH,CARDINAL HEALTH INC,Healthcare,Medical Distribution,NYQ,0.616,1800531,Yes,,Large
+FTNT,FORTINET INC,Technology,Software - Infrastructure,NMS,1.04,6807204,No,,Large
+KEYS,KEYSIGHT TECHNOLOGIES INC,Technology,Scientific & Technical Instruments,NYQ,1.137,1489421,No,,Large
+EXC,EXELON CORP,Utilities,Utilities - Regulated Electric,NMS,0.515,8900113,Yes,,Large
+TER,TERADYNE INC,Technology,Semiconductor Equipment & Materials,NMS,1.801,3477991,Yes,,Large
+NU,NU HOLDINGS LTD CLASS A,Financial Services,Banks - Regional,NYQ,1.111,57005755,No,,Large
+EW,EDWARDS LIFESCIENCES CORP,Healthcare,Medical Devices,NYQ,0.934,4645675,No,,Large
+XEL,XCEL ENERGY INC,Utilities,Utilities - Regulated Electric,NMS,0.426,4996660,Yes,,Large
+URI,UNITED RENTALS INC,Industrials,Rental & Leasing Services,NYQ,1.654,695054,Yes,,Large
+APO,APOLLO GLOBAL MANAGEMENT INC,Financial Services,Asset Management,NYQ,1.638,5327683,Yes,,Large
+F,FORD MOTOR CO,Consumer Cyclical,Auto Manufacturers,NYQ,1.665,65561347,Yes,,Large
+FERG,FERGUSON ENTERPRISES INC,Industrials,Industrial Distribution,NYQ,1.151,1390521,Yes,,Large
+IDXX,IDEXX LABORATORIES INC,Healthcare,Diagnostics & Research,NMS,1.722,517126,No,,Large
+BDX,BECTON DICKINSON,Healthcare,Medical Instruments & Supplies,NYQ,0.307,2795935,Yes,,Large
+RSG,REPUBLIC SERVICES INC,Industrials,Waste Management,NYQ,0.521,1423113,Yes,,Large
+DAL,DELTA AIR LINES INC,Industrials,Airlines,NYQ,1.35,11271860,Yes,,Large
+CARR,CARRIER GLOBAL CORP,Industrials,Building Products & Equipment,NYQ,1.289,7603936,Yes,,Large
+PSA,PUBLIC STORAGE REIT,Real Estate,REIT - Industrial,NYQ,0.965,1270470,Yes,,Large
+OXY,OCCIDENTAL PETROLEUM CORP,Energy,Oil & Gas E&P,NYQ,0.351,16402922,Yes,,Large
+WAB,WESTINGHOUSE AIR BRAKE TECHNOLOGIE,Industrials,Railroads,NYQ,0.979,865157,Yes,,Large
+COHR,COHERENT CORP,Technology,Scientific & Technical Instruments,NYQ,1.909,7267640,No,,Large
+YUM,YUM BRANDS INC,Consumer Cyclical,Restaurants,NYQ,0.639,1960695,Yes,,Large
+CMG,CHIPOTLE MEXICAN GRILL INC,Consumer Cyclical,Restaurants,NYQ,1.019,17321222,No,,Large
+FITB,FIFTH THIRD BANCORP,Financial Services,Banks - Regional,NMS,0.967,12645113,Yes,,Large
+CVNA,CARVANA CLASS A,Consumer Cyclical,Auto & Truck Dealerships,NYQ,3.673,3900563,No,,Large
+EBAY,EBAY INC,Consumer Cyclical,Internet Retail,NMS,1.371,5326618,Yes,,Large
+PYPL,PAYPAL HOLDINGS INC,Financial Services,Credit Services,NMS,1.459,24143114,Yes,,Large
+ALNY,ALNYLAM PHARMACEUTICALS INC,Healthcare,Biotechnology,NMS,0.38,1393554,No,,Large
+ROK,ROCKWELL AUTOMATION INC,Industrials,Specialty Industrial Machinery,NYQ,1.522,1024685,Yes,,Large
+KR,KROGER,Consumer Defensive,Grocery Stores,NYQ,0.546,7131701,Yes,,Large
+ED,CONSOLIDATED EDISON INC,Utilities,Utilities - Regulated Electric,NYQ,0.345,2254211,Yes,,Large
+AIG,AMERICAN INTERNATIONAL GROUP INC,Financial Services,Insurance - Diversified,NYQ,0.58,4843108,Yes,,Large
+AMP,AMERIPRISE FINANCE INC,Financial Services,Asset Management,NYQ,1.271,699454,Yes,,Large
+PEG,PUBLIC SERVICE ENTERPRISE GROUP IN,Utilities,Utilities - Regulated Electric,NYQ,0.582,3044416,Yes,,Large
+MET,METLIFE INC,Financial Services,Insurance - Life,NYQ,0.745,4025716,Yes,,Large
+CBRE,CBRE GROUP INC CLASS A,Real Estate,Real Estate Services,NYQ,1.341,2306219,No,,Large
+NUE,NUCOR CORP,Basic Materials,Steel,NYQ,1.768,1718222,Yes,,Large
+PCG,PG&E CORP,Utilities,Utilities - Regulated Electric,NYQ,0.308,22799803,Yes,,Large
+GRMN,GARMIN LTD,Technology,Scientific & Technical Instruments,NYQ,0.949,980209,Yes,,Large
+NDAQ,NASDAQ INC,Financial Services,Financial Data & Stock Exchanges,NMS,1.035,4426016,Yes,,Large
+COIN,COINBASE GLOBAL INC CLASS A,Financial Services,Financial Data & Stock Exchanges,NMS,3.709,12570808,No,,Large
+VTR,VENTAS REIT INC,Real Estate,REIT - Healthcare Facilities,NYQ,0.76,3059840,Yes,,Large
+MSTR,STRATEGY INC CLASS A,Technology,Software - Application,NMS,3.633,22672990,No,,Large
+MSCI,MSCI INC,Financial Services,Financial Data & Stock Exchanges,NYQ,1.301,628603,Yes,,Large
+ROP,ROPER TECHNOLOGIES INC,Technology,Software - Application,NMS,0.927,1698891,Yes,,Large
+HIG,HARTFORD INSURANCE GROUP INC,Financial Services,Insurance - Diversified,NYQ,0.516,1597526,Yes,,Large
+WEC,WEC ENERGY GROUP INC,Utilities,Utilities - Regulated Electric,NYQ,0.534,2283039,Yes,,Large
+FANG,DIAMONDBACK ENERGY INC,Energy,Oil & Gas E&P,NMS,0.569,2959452,Yes,,Large
+DDOG,DATADOG INC CLASS A,Technology,Software - Application,NMS,1.36,5920400,No,,Large
+ODFL,OLD DOMINION FREIGHT LINE INC,Industrials,Trucking,NMS,1.205,2353447,Yes,,Large
+VMC,VULCAN MATERIALS,Basic Materials,Building Materials,NYQ,1.059,1296854,Yes,,Large
+EQT,EQT CORP,Energy,Oil & Gas E&P,NYQ,0.722,10435434,Yes,,Large
+STT,STATE STREET CORP,Financial Services,Asset Management,NYQ,1.416,2178536,Yes,,Large
+TTWO,TAKE TWO INTERACTIVE SOFTWARE INC,Communication Services,Electronic Gaming & Multimedia,NMS,0.958,2282044,No,,Large
+DHI,D R HORTON INC,Consumer Cyclical,Residential Construction,NYQ,1.407,3139842,Yes,,Large
+MLM,MARTIN MARIETTA MATERIALS INC,Basic Materials,Building Materials,NYQ,1.149,537631,Yes,,Large
+RBLX,ROBLOX CORP CLASS A,Communication Services,Electronic Gaming & Multimedia,NYQ,1.673,11939526,No,,Large
+CCI,CROWN CASTLE INC,Real Estate,REIT - Specialty,NYQ,0.951,3431568,Yes,,Large
+SYY,SYSCO CORP,Consumer Defensive,Food Distribution,NYQ,0.595,4465070,Yes,,Large
+ADM,ARCHER DANIELS MIDLAND,Consumer Defensive,Farm Products,NYQ,0.683,4095614,Yes,,Large
+INSM,INSMED INC,Healthcare,Biotechnology,NMS,1.168,2578903,No,,Large
+PRU,PRUDENTIAL FINANCIAL INC,Financial Services,Insurance - Life,NYQ,0.966,2373186,Yes,,Large
+MCHP,MICROCHIP TECHNOLOGY INC,Technology,Semiconductors,NMS,1.447,9389780,Yes,,Large
+ACGL,ARCH CAPITAL GROUP LTD,Financial Services,Insurance - Diversified,NMS,0.365,2038070,No,,Large
+KVUE,KENVUE INC,Consumer Defensive,Household & Personal Products,NYQ,0.473,41305747,Yes,,Large
+KDP,KEURIG DR PEPPER INC,Consumer Defensive,Beverages - Non-Alcoholic,NMS,0.303,10702550,Yes,,Large
+GEHC,GE HEALTHCARE TECHNOLOGIES INC,Healthcare,Medical Devices,NMS,1.181,3661332,Yes,,Large
+RMD,RESMED INC,Healthcare,Medical Instruments & Supplies,NYQ,0.887,1100640,Yes,,Large
+A,AGILENT TECHNOLOGIES INC,Healthcare,Diagnostics & Research,NYQ,1.312,2293775,Yes,,Large
+HAL,HALLIBURTON,Energy,Oil & Gas Equipment & Services,NYQ,0.753,16168304,Yes,,Large
+KMB,KIMBERLY CLARK CORP,Consumer Defensive,Household & Personal Products,NMS,0.234,5828573,Yes,,Large
+XYZ,BLOCK INC CLASS A,Technology,Software - Infrastructure,NYQ,2.675,8562198,No,,Large
+RKLB,ROCKET LAB CORP,Industrials,Aerospace & Defense,NCM,2.207,22226568,No,,Large
+AXON,AXON ENTERPRISE INC,Industrials,Aerospace & Defense,NMS,1.524,993577,No,,Large
+MTB,M&T BANK CORP,Financial Services,Banks - Regional,NYQ,0.588,1291763,Yes,,Large
+IR,INGERSOLL RAND INC,Industrials,Specialty Industrial Machinery,NYQ,1.289,3856904,Yes,,Large
+HBAN,HUNTINGTON BANCSHARES INC,Financial Services,Banks - Regional,NMS,0.967,34923929,Yes,,Large
+HPE,HEWLETT PACKARD ENTERPRISE,Technology,Communication Equipment,NYQ,1.311,18805790,Yes,,Large
+UAL,UNITED AIRLINES HOLDINGS INC,Industrials,Airlines,NMS,1.247,6957145,No,,Large
+DTE,DTE ENERGY,Utilities,Utilities - Regulated Electric,NYQ,0.434,1498001,Yes,,Large
+CCL,CARNIVAL CORP,Consumer Cyclical,Travel Services,NYQ,2.459,24608062,Yes,,Large
+NRG,NRG ENERGY INC,Utilities,Utilities - Independent Power Producers,NYQ,1.265,2594162,Yes,,Large
+OTIS,OTIS WORLDWIDE CORP,Industrials,Specialty Industrial Machinery,NYQ,0.986,3931560,Yes,,Large
+FISV,FISERV INC,Financials,,NMS,,8504724,No,,Large
+XYL,XYLEM INC,Industrials,Specialty Industrial Machinery,NYQ,1.169,1895713,Yes,,Large
+DVN,DEVON ENERGY CORP,Energy,Oil & Gas E&P,NYQ,0.619,14158804,Yes,,Large
+CBOE,CBOE GLOBAL MARKETS INC,Financial Services,Financial Data & Stock Exchanges,BTS,0.336,916695,Yes,,Large
+TPR,TAPESTRY INC,Consumer Cyclical,Luxury Goods,NYQ,1.597,2299457,Yes,,Large
+AEE,AMEREN CORP,Utilities,Utilities - Regulated Electric,NYQ,0.531,1757798,Yes,,Large
+IRM,IRON MOUNTAIN INC,Real Estate,REIT - Specialty,NYQ,1.148,1894578,Yes,,Large
+CTSH,COGNIZANT TECHNOLOGY SOLUTIONS COR,Technology,Information Technology Services,NMS,0.983,6671204,Yes,,Large
+ATO,ATMOS ENERGY CORP,Utilities,Utilities - Regulated Gas,NYQ,0.698,1355370,Yes,,Large
+WAT,WATERS CORP,Healthcare,Diagnostics & Research,NYQ,1.203,1110893,No,,Large
+CPRT,COPART INC,Industrials,Specialty Business Services,NMS,1.106,9452565,No,,Large
+HSY,HERSHEY FOODS,Consumer Defensive,Confectioners,NYQ,0.112,2040670,Yes,,Large
+PAYX,PAYCHEX INC,Technology,Software - Application,NMS,,4135560,Yes,,Large
+IQV,IQVIA HOLDINGS INC,Healthcare,Diagnostics & Research,NYQ,1.391,2096791,No,,Large
+IBKR,INTERACTIVE BROKERS GROUP INC CLAS,Financial Services,Capital Markets,NMS,1.251,5103000,Yes,,Large
+VICI,VICI PPTYS INC,Real Estate,REIT - Diversified,NYQ,0.699,10232209,Yes,,Large
+BE,BLOOM ENERGY CLASS A CORP,Industrials,Electrical Equipment & Parts,NYQ,3.183,11649432,No,,Large
+DOW,DOW INC,Basic Materials,Chemicals,NYQ,0.71,14340342,Yes,,Large
+PPL,PPL CORP,Utilities,Utilities - Regulated Electric,NYQ,0.689,8994147,Yes,,Large
+CNP,CENTERPOINT ENERGY INC,Utilities,Utilities - Regulated Electric,NYQ,0.539,5513449,Yes,,Large
+JBL,JABIL INC,Technology,Electronic Components,NYQ,1.183,1199875,Yes,,Large
+DOV,DOVER CORP,Industrials,Specialty Industrial Machinery,NYQ,1.249,1300311,Yes,,Large
+EIX,EDISON INTERNATIONAL,Utilities,Utilities - Regulated Electric,NYQ,0.777,3461791,Yes,,Large
+FTI,TECHNIPFMC PLC,Energy,Oil & Gas Equipment & Services,NYQ,0.735,4100965,Yes,,Large
+FE,FIRSTENERGY CORP,Utilities,Utilities - Regulated Electric,NYQ,0.601,4793565,Yes,,Large
+EXR,EXTRA SPACE STORAGE REIT INC,Real Estate,REIT - Industrial,NYQ,1.242,1369219,Yes,,Large
+WDAY,WORKDAY INC CLASS A,Technology,Software - Application,NMS,1.167,5112214,No,,Large
+WTW,WILLIS TOWERS WATSON PLC,Financial Services,Insurance Brokers,NMS,0.622,782842,Yes,,Large
+HUBB,HUBBELL INC,Industrials,Electrical Equipment & Parts,NYQ,0.997,549498,Yes,,Large
+NTRA,NATERA INC,Healthcare,Diagnostics & Research,NMS,1.702,1204296,No,,Large
+BIIB,BIOGEN INC,Healthcare,Drug Manufacturers - General,NMS,0.162,1328572,No,,Large
+NTRS,NORTHERN TRUST CORP,Financial Services,Asset Management,NMS,1.266,1106878,Yes,,Large
+EXPE,EXPEDIA GROUP INC,Consumer Cyclical,Travel Services,NMS,1.41,2693281,Yes,,Large
+AWK,AMERICAN WATER WORKS INC,Utilities,Utilities - Regulated Water,NYQ,0.759,1830837,Yes,,Large
+CFG,CITIZENS FINANCIAL GROUP INC,Financial Services,Banks - Regional,NYQ,1.085,5394114,Yes,,Large
+DG,DOLLAR GENERAL CORP,Consumer Defensive,Discount Stores,NYQ,0.22,3287611,Yes,,Large
+ES,EVERSOURCE ENERGY,Utilities,Utilities - Regulated Electric,NYQ,0.753,2724988,Yes,,Large
+CTRA,COTERRA ENERGY INC,Energy,Oil & Gas E&P,NYQ,0.353,11757983,Yes,,Large
+QSR,RESTAURANTS BRANDS INTERNATIONAL I,Consumer Cyclical,Restaurants,NYQ,0.56,3440537,Yes,,Large
+VEEV,VEEVA SYSTEMS INC CLASS A,Healthcare,Health Information Services,NYQ,1.122,2186914,No,,Large
+RJF,RAYMOND JAMES INC,Financial Services,Asset Management,NYQ,1.007,1422334,Yes,,Large
+FTAI,FTAI AVIATION LTD,Industrials,Rental & Leasing Services,NMS,1.569,1846396,Yes,,Large
+VRSK,VERISK ANALYTICS INC,Industrials,Consulting Services,NMS,0.797,2006432,Yes,,Large
+STLD,STEEL DYNAMICS INC,Basic Materials,Steel,NMS,1.395,1330519,Yes,,Large
+TPL,TEXAS PACIFIC LAND CORP,Energy,Oil & Gas E&P,NYQ,0.731,520659,Yes,,Large
+FLEX,FLEX LTD,Technology,Electronic Components,NMS,1.248,3678416,No,,Large
+ON,ON SEMICONDUCTOR CORP,Technology,Semiconductors,NMS,1.53,8808685,No,,Large
+CPNG,COUPANG INC CLASS A,Consumer Cyclical,Internet Retail,NYQ,1.2,25125786,No,,Large
+Q,QNITY ELECTRONICS INC,Technology,Semiconductor Equipment & Materials,NYQ,,2493898,Yes,,Large
+DXCM,DEXCOM INC,Healthcare,Medical Devices,NMS,1.526,5085998,No,,Large
+PPG,PPG INDUSTRIES INC,Basic Materials,Specialty Chemicals,NYQ,1.123,2291209,Yes,,Large
+EXE,EXPAND ENERGY CORP,Energy,Oil & Gas E&P,NMS,0.473,4038608,Yes,,Large
+OMC,OMNICOM GROUP INC,Communication Services,Advertising Agencies,NYQ,0.71,5184659,Yes,,Large
+CINF,CINCINNATI FINANCIAL CORP,Financial Services,Insurance - Property & Casualty,NMS,0.636,778926,Yes,,Large
+LYV,LIVE NATION ENTERTAINMENT INC,Communication Services,Entertainment,NYQ,1.145,3040713,No,,Large
+ULTA,ULTA BEAUTY INC,Consumer Cyclical,Specialty Retail,NMS,0.847,673354,No,,Large
+SYF,SYNCHRONY FINANCIAL,Financial Services,Credit Services,NYQ,1.412,4767375,Yes,,Large
+TSCO,TRACTOR SUPPLY,Consumer Cyclical,Specialty Retail,NMS,0.698,7019244,Yes,,Large
+FIS,FIDELITY NATIONAL INFORMATION SERV,Technology,Information Technology Services,NYQ,0.909,5415452,Yes,,Large
+AVB,AVALONBAY COMMUNITIES REIT INC,Real Estate,REIT - Residential,NYQ,0.745,1156609,Yes,,Large
+CMS,CMS ENERGY CORP,Utilities,Utilities - Regulated Electric,NYQ,0.432,3122681,Yes,,Large
+LH,LABCORP HOLDINGS INC,Healthcare,Diagnostics & Research,NYQ,0.974,706726,Yes,,Large
+PHM,PULTEGROUP INC,Consumer Cyclical,Residential Construction,NYQ,1.341,1886596,Yes,,Large
+LPLA,LPL FINANCIAL HOLDINGS INC,Financial Services,Capital Markets,NMS,0.577,1007588,Yes,,Large
+RF,REGIONS FINANCIAL CORP,Financial Services,Banks - Regional,NYQ,1.041,15404724,Yes,,Large
+EQR,EQUITY RESIDENTIAL REIT,Real Estate,REIT - Residential,NYQ,0.735,2687991,Yes,,Large
+NI,NISOURCE INC,Utilities,Utilities - Regulated Gas,NYQ,0.616,4045085,Yes,,Large
+WWD,WOODWARD INC,Industrials,Aerospace & Defense,NMS,0.964,650916,Yes,,Large
+DRI,DARDEN RESTAURANTS INC,Consumer Cyclical,Restaurants,NYQ,0.599,1555004,Yes,,Large
+XPO,XPO INC,Industrials,Trucking,NYQ,1.722,1801006,No,,Large
+RGLD,ROYAL GOLD INC,Basic Materials,Gold,NMS,0.479,1138708,Yes,,Large
+CHD,CHURCH AND DWIGHT INC,Consumer Defensive,Household & Personal Products,NYQ,0.426,2397352,Yes,,Large
+EFX,EQUIFAX INC,Industrials,Consulting Services,NYQ,1.532,1889583,Yes,,Large
+VLTO,VERALTO CORP,Industrials,Pollution & Treatment Controls,NYQ,1.153,2015347,Yes,,Large
+STZ,CONSTELLATION BRANDS INC CLASS A,Consumer Defensive,Beverages - Brewers,NYQ,0.422,2388427,Yes,,Large
+DGX,QUEST DIAGNOSTICS INC,Healthcare,Diagnostics & Research,NYQ,0.63,996822,Yes,,Large
+STE,STERIS,Healthcare,Medical Devices,NYQ,1.036,831221,Yes,,Large
+ZM,ZOOM COMMUNICATIONS INC CLASS A,Technology,Software - Application,NMS,0.971,4149201,No,,Large
+WSM,WILLIAMS SONOMA INC,Consumer Cyclical,Specialty Retail,NYQ,1.558,1192190,Yes,,Large
+HUM,HUMANA INC,Healthcare,Healthcare Plans,NYQ,0.415,2039091,Yes,,Large
+VRSN,VERISIGN INC,Technology,Software - Infrastructure,NMS,0.765,792478,Yes,,Large
+BURL,BURLINGTON STORES INC,Consumer Cyclical,Apparel Retail,NYQ,1.704,855183,No,,Large
+DLTR,DOLLAR TREE INC,Consumer Defensive,Discount Stores,NMS,0.692,3093363,No,,Large
+MTZ,MASTEC INC,Industrials,Engineering & Construction,NYQ,1.889,1009085,No,,Large
+SW,SMURFIT WESTROCK PLC,Consumer Cyclical,Packaging & Containers,NYQ,1.004,6450173,Yes,,Large
+ALB,ALBEMARLE CORP,Basic Materials,Specialty Chemicals,NYQ,1.476,2812822,Yes,,Large
+CF,CF INDUSTRIES HOLDINGS INC,Basic Materials,Agricultural Inputs,NYQ,0.689,4217059,Yes,,Large
+NTAP,NETAPP INC,Technology,Software - Infrastructure,NMS,1.349,2493045,Yes,,Large
+ATI,ATI INC,Industrials,Metal Fabrication,NYQ,0.952,2108470,No,,Large
+FSLR,FIRST SOLAR INC,Technology,Solar,NMS,1.648,2419618,No,,Large
+USFD,US FOODS HOLDING CORP,Consumer Defensive,Food Distribution,NYQ,0.978,2918495,No,,Large
+CHRW,CH ROBINSON WORLDWIDE INC,Industrials,Integrated Freight & Logistics,NMS,0.903,2310424,Yes,,Large
+PFG,PRINCIPAL FINANCIAL GROUP INC,Financial Services,Asset Management,NMS,0.876,1734554,Yes,,Large
+LYB,LYONDELLBASELL INDUSTRIES NV CLASS,Basic Materials,Specialty Chemicals,NYQ,0.674,8100852,Yes,,Large
+GIS,GENERAL MILLS INC,Consumer Defensive,Packaged Foods,NYQ,-0.095,9150831,Yes,,Large
+LDOS,LEIDOS HOLDINGS INC,Technology,Information Technology Services,NYQ,0.617,1146583,Yes,,Large
+CPAY,CORPAY INC,Technology,Software - Infrastructure,NYQ,0.819,688442,No,,Large
+ARES,ARES MANAGEMENT CORP CLASS A,Financial Services,Asset Management,NYQ,1.565,3849114,Yes,,Large
+CRS,CARPENTER TECHNOLOGY CORP,Industrials,Metal Fabrication,NYQ,1.249,835842,Yes,,Large
+TROW,T ROWE PRICE GROUP INC,Financial Services,Asset Management,NMS,1.553,2384411,Yes,,Large
+MDB,MONGODB INC CLASS A,Technology,Software - Infrastructure,NGM,1.51,1898580,No,,Large
+EXPD,EXPEDITORS INTERNATIONAL OF WASHIN,Industrials,Integrated Freight & Logistics,NYQ,1.107,1586383,Yes,,Large
+CDE,COEUR MINING INC,Basic Materials,Gold,NYQ,1.186,29766667,No,,Large
+ILMN,ILLUMINA INC,Healthcare,Diagnostics & Research,NMS,1.503,2048988,No,,Large
+NVT,NVENT ELECTRIC PLC,Industrials,Electrical Equipment & Parts,NYQ,1.303,2367339,Yes,,Large
+DD,DUPONT DE NEMOURS INC,Basic Materials,Specialty Chemicals,NYQ,1.115,4742929,Yes,,Large
+KEY,KEYCORP,Financial Services,Banks - Regional,NYQ,1.086,16692737,Yes,,Large
+BWXT,BWX TECHNOLOGIES INC,Industrials,Aerospace & Defense,NYQ,0.805,1062837,Yes,,Large
+EVRG,EVERGY INC,Utilities,Utilities - Regulated Electric,NMS,0.604,2207832,Yes,,Large
+SOFI,SOFI TECHNOLOGIES INC,Financial Services,Credit Services,NMS,2.259,64416308,No,,Large
+KHC,KRAFT HEINZ,Consumer Defensive,Packaged Foods,NMS,0.01,16891170,Yes,,Large
+RPRX,ROYALTY PHARMA PLC CLASS A,Healthcare,Biotechnology,NMS,0.421,3714986,Yes,,Large
+PKG,PACKAGING CORP OF AMERICA,Consumer Cyclical,Packaging & Containers,NYQ,0.896,1097675,Yes,,Large
+FN,FABRINET,Technology,Electronic Components,NYQ,1.024,731245,No,,Large
+PSTG,EVERPURE INC CLASS A,Technology,Computer Hardware,NYQ,1.329,3531475,No,,Large
+AA,ALCOA CORP,Basic Materials,Aluminum,NYQ,1.779,7843708,Yes,,Large
+BR,BROADRIDGE FINANCIAL SOLUTIONS INC,Technology,Information Technology Services,NYQ,0.977,1494849,Yes,,Large
+IP,INTERNATIONAL PAPER,Consumer Cyclical,Packaging & Containers,NYQ,1.038,7276990,Yes,,Large
+BRO,BROWN & BROWN INC,Financial Services,Insurance Brokers,NYQ,0.798,3536293,Yes,,Large
+AMCR,AMCOR PLC,Consumer Cyclical,Packaging & Containers,NYQ,0.635,6611681,Yes,,Large
+IFF,INTERNATIONAL FLAVORS & FRAGRANCES,Basic Materials,Specialty Chemicals,NYQ,1.005,1822057,Yes,,Large
+ASTS,AST SPACEMOBILE INC CLASS A,Technology,Communication Equipment,NMS,2.867,14800942,No,,Large
+TWLO,TWILIO INC CLASS A,Technology,Software - Infrastructure,NYQ,1.352,2402165,No,,Large
+WST,WEST PHARMACEUTICAL SERVICES INC,Healthcare,Medical Instruments & Supplies,NYQ,1.179,1005381,Yes,,Large
+SBAC,SBA COMMUNICATIONS REIT CORP CLASS,Real Estate,REIT - Specialty,NMS,0.833,948214,Yes,,Large
+LNT,ALLIANT ENERGY CORP,Utilities,Utilities - Regulated Electric,NMS,0.611,2641447,Yes,,Large
+L,LOEWS CORP,Financial Services,Insurance - Property & Casualty,NYQ,0.588,725649,Yes,,Large
+CHTR,CHARTER COMMUNICATIONS INC CLASS A,Communication Services,Telecom Services,NMS,1.023,1983413,No,,Large
+FWONK,LIBERTY MEDIA FORMULA ONE SERIES C,Communication Services,Entertainment,NMS,0.717,2171567,No,,Large
+TSN,TYSON FOODS INC CLASS A,Consumer Defensive,Farm Products,NYQ,0.441,3127470,Yes,,Large
+ZBH,ZIMMER BIOMET HOLDINGS INC,Healthcare,Medical Devices,NYQ,0.591,2252463,Yes,,Large
+RBA,RB GLOBAL INC,Industrials,Specialty Business Services,NYQ,0.554,1520534,Yes,,Large
+LUV,SOUTHWEST AIRLINES,Industrials,Airlines,NYQ,1.094,10241255,Yes,,Large
+HPQ,HP INC,Technology,Computer Hardware,NYQ,1.178,19998001,Yes,,Large
+FTV,FORTIVE CORP,Technology,Scientific & Technical Instruments,NYQ,0.998,3923132,Yes,,Large
+WY,WEYERHAEUSER REIT,Real Estate,REIT - Specialty,NYQ,1.032,6907473,Yes,,Large
+MRNA,MODERNA INC,Healthcare,Biotechnology,NMS,1.336,11143477,No,,Large
+ENTG,ENTEGRIS INC,Technology,Semiconductor Equipment & Materials,NMS,1.295,2954026,Yes,,Large
+RDDT,REDDIT INC CLASS A,Communication Services,Internet Content & Information,NYQ,2.419,5601508,No,,Large
+LEN,LENNAR A CORP CLASS A,Consumer Cyclical,Residential Construction,NYQ,1.403,3201932,Yes,,Large
+EL,ESTEE LAUDER INC CLASS A,Consumer Defensive,Household & Personal Products,NYQ,1.112,4751624,Yes,,Large
+NXT,NEXTPOWER INC CLASS A,Technology,Solar,NMS,2.424,2019632,No,,Large
+HOLX,HOLOGIC INC,Healthcare,Medical Instruments & Supplies,NMS,0.728,2815175,No,,Large
+BG,BUNGE GLOBAL SA,Consumer Defensive,Farm Products,NYQ,0.743,1870247,Yes,,Large
+PTC,PTC INC,Technology,Software - Application,NMS,1.042,1141509,No,,Large
+RVMD,REVOLUTION MEDICINES INC,Healthcare,Biotechnology,NMS,1.007,3322303,No,,Large
+FFIV,F5 INC,Technology,Software - Infrastructure,NMS,0.994,869880,No,,Large
+BAM,BROOKFIELD ASSET MANAGEMENT VOTING,Financial Services,Asset Management,NYQ,1.287,3773332,Yes,,Large
+LVS,LAS VEGAS SANDS CORP,Consumer Cyclical,Resorts & Casinos,NYQ,0.888,5412375,Yes,,Large
+CSGP,COSTAR GROUP INC,Real Estate,Real Estate Services,NMS,0.902,7057327,No,,Large
+LULU,LULULEMON ATHLETICA INC,Consumer Cyclical,Apparel Retail,NMS,1.013,2781421,No,,Large
+CNC,CENTENE CORP,Healthcare,Healthcare Plans,NYQ,0.459,6775098,No,,Large
+JBHT,JB HUNT TRANSPORT SERVICES INC,Industrials,Integrated Freight & Logistics,NMS,1.207,1056429,Yes,,Large
+THC,TENET HEALTHCARE CORP,Healthcare,Medical Care Facilities,NYQ,1.412,1038129,No,,Large
+SATS,ECHOSTAR CORP CLASS A,Communication Services,Telecom Services,NMS,1.02,6571691,No,,Large
+OVV,OVINTIV INC,Energy,Oil & Gas E&P,NYQ,0.704,5135722,Yes,,Large
+BALL,BALL CORP,Consumer Cyclical,Packaging & Containers,NYQ,1.115,2281016,Yes,,Large
+ITT,ITT INC,Industrials,Specialty Industrial Machinery,NYQ,1.327,980601,Yes,,Large
+AKAM,AKAMAI TECHNOLOGIES INC,Technology,Software - Infrastructure,NMS,0.704,4468626,No,,Large
+FLUT,FLUTTER ENTERTAINMENT PLC,Consumer Cyclical,Gambling,NYQ,1.177,4066122,No,,Large
+ROL,ROLLINS INC,Consumer Cyclical,Personal Services,NYQ,0.796,3110331,Yes,,Large
+TXT,TEXTRON INC,Industrials,Aerospace & Defense,NYQ,0.935,1815809,Yes,,Large
+GPN,GLOBAL PAYMENTS INC,Industrials,Specialty Business Services,NYQ,0.732,3854550,Yes,,Large
+TRMB,TRIMBLE INC,Technology,Scientific & Technical Instruments,NMS,1.574,2098034,No,,Large
+CDW,CDW CORP,Technology,Information Technology Services,NMS,1.046,1749559,Yes,,Large
+VTRS,VIATRIS INC,Healthcare,Drug Manufacturers - Specialty & Generic,NMS,0.796,10391886,Yes,,Large
+ESS,ESSEX PROPERTY TRUST REIT INC,Real Estate,REIT - Residential,NYQ,0.722,560560,Yes,,Large
+SUI,SUN COMMUNITIES REIT INC,Real Estate,REIT - Residential,NYQ,0.882,850103,Yes,,Large
+MKSI,MKS,Technology,Scientific & Technical Instruments,NMS,1.92,1516416,Yes,,Large
+J,JACOBS SOLUTIONS INC,Industrials,Engineering & Construction,NYQ,0.734,937354,Yes,,Large
+CRDO,CREDO TECHNOLOGY GROUP HOLDING LTD,Technology,Semiconductors,NMS,2.676,7180222,No,,Large
+HII,HUNTINGTON INGALLS INDUSTRIES INC,Industrials,Aerospace & Defense,NYQ,0.28,580683,Yes,,Large
+APG,API GROUP CORP,Industrials,Engineering & Construction,NYQ,1.682,2802732,No,,Large
+MTSI,MACOM TECHNOLOGY SOLUTIONS INC,Technology,Semiconductors,NMS,1.457,1396518,No,,Large
+EWBC,EAST WEST BANCORP INC,Financial Services,Banks - Regional,NMS,0.898,1187532,Yes,,Large
+INVH,INVITATION HOMES INC,Real Estate,REIT - Residential,NYQ,0.814,7398845,Yes,,Large
+WPC,W. P. CAREY REIT INC,Real Estate,REIT - Diversified,NYQ,0.77,1373293,Yes,,Large
+KIM,KIMCO REALTY REIT CORP,Real Estate,REIT - Retail,NYQ,1.058,5986927,Yes,,Large
+NLY,ANNALY CAPITAL MANAGEMENT REIT INC,Real Estate,REIT - Mortgage,NYQ,1.297,8641883,Yes,,Large
+INCY,INCYTE CORP,Healthcare,Biotechnology,NMS,0.844,1880377,No,,Large
+SCCO,SOUTHERN COPPER CORP,Basic Materials,Copper,NYQ,1.076,2210997,Yes,,Large
+SGI,SOMNIGROUP INTERNATIONAL INC,Consumer Cyclical,"Furnishings, Fixtures & Appliances",NYQ,1.268,2145798,Yes,,Large
+TLN,TALEN ENERGY CORP,Utilities,Utilities - Independent Power Producers,NMS,1.615,878050,No,,Large
+SNX,TD SYNNEX CORP,Technology,Electronics & Computer Distribution,NYQ,1.303,789962,Yes,,Large
+WRB,WR BERKLEY CORP,Financial Services,Insurance - Property & Casualty,NYQ,0.336,2347675,Yes,,Large
+PODD,INSULET CORP,Healthcare,Medical Devices,NMS,1.435,1026604,No,,Large
+PR,PERMIAN RESOURCES CORP CLASS A,Energy,Oil & Gas E&P,NYQ,0.642,13250744,Yes,,Large
+DECK,DECKERS OUTDOOR CORP,Consumer Cyclical,Footwear & Accessories,NYQ,1.161,2657988,No,,Large
+CLH,CLEAN HARBORS INC,Industrials,Waste Management,NYQ,0.946,514385,No,,Large
+TYL,TYLER TECHNOLOGIES INC,Technology,Software - Application,NYQ,0.934,660601,No,,Large
+GPC,GENUINE PARTS,Consumer Cyclical,Auto Parts,NYQ,0.772,1715844,Yes,,Large
+JLL,JONES LANG LASALLE INC,Real Estate,Real Estate Services,NYQ,1.435,546524,No,,Large
+APA,APA CORP,Energy,Oil & Gas E&P,NMS,0.708,8289691,Yes,,Large
+COO,COOPER INC,Healthcare,Medical Instruments & Supplies,NMS,1.03,2073431,No,,Large
+IEX,IDEX CORP,Industrials,Specialty Industrial Machinery,NYQ,0.96,872844,Yes,,Large
+SSNC,SS AND C TECHNOLOGIES HOLDINGS INC,Technology,Software - Application,NMS,1.174,2422842,Yes,,Large
+PNR,PENTAIR,Industrials,Specialty Industrial Machinery,NYQ,1.212,1829519,Yes,,Large
+MDLN,MEDLINE INC CLASS A,Healthcare,Medical Instruments & Supplies,NMS,,5404147,No,,Large
+MAA,MID AMERICA APARTMENT COMMUNITIES,Real Estate,REIT - Residential,NYQ,0.768,991939,Yes,,Large
+GGG,GRACO INC,Industrials,Specialty Industrial Machinery,NYQ,1.068,1037254,Yes,,Large
+TW,TRADEWEB MARKETS INC CLASS A,Financial Services,Capital Markets,NMS,0.776,1533701,Yes,,Large
+NYT,NEW YORK TIMES CLASS A,Communication Services,Publishing,NYQ,1.107,2350481,Yes,,Large
+TKO,TKO GROUP HOLDINGS INC CLASS A,Communication Services,Entertainment,NYQ,0.406,1148916,Yes,,Large
+RKT,ROCKET COMPANIES INC CLASS A,Financial Services,Mortgage Finance,NYQ,2.314,30760396,No,,Large
+RL,RALPH LAUREN CORP CLASS A,Consumer Cyclical,Apparel Manufacturing,NYQ,1.488,640522,Yes,,Large
+REG,REGENCY CENTERS REIT CORP,Real Estate,REIT - Retail,NMS,0.922,1356522,Yes,,Large
+APTV,APTIV PLC,Consumer Cyclical,Auto Parts,NYQ,1.534,2448090,No,,Large
+WCC,WESCO INTERNATIONAL INC,Industrials,Industrial Distribution,NYQ,1.451,600172,Yes,,Large
+ALAB,ASTERA LABS INC,Technology,Semiconductors,NMS,1.756,5170431,No,,Large
+HST,HOST HOTELS & RESORTS REIT INC,Real Estate,REIT - Hotel & Motel,NMS,1.154,8943222,Yes,,Large
+TRU,TRANSUNION,Financial Services,Financial Data & Stock Exchanges,NYQ,1.698,2804368,Yes,,Large
+AVY,AVERY DENNISON CORP,Consumer Cyclical,Packaging & Containers,NYQ,0.97,655654,Yes,,Large
+ZS,ZSCALER INC,Technology,Software - Infrastructure,NMS,1.124,2723167,No,,Large
+VIK,VIKING HOLDINGS,Consumer Cyclical,Travel Services,NYQ,,2645116,No,,Large
+DTM,DT MIDSTREAM INC,Energy,Oil & Gas Midstream,NYQ,0.778,838596,Yes,,Large
+PNFP,PINNACLE FINANCIAL PARTNERS INC,Financial Services,Banks - Regional,NYQ,1.002,1685883,Yes,,Large
+PFGC,PERFORMANCE FOOD GROUP,Consumer Defensive,Food Distribution,NYQ,0.904,2366332,No,,Large
+TOL,TOLL BROTHERS INC,Consumer Cyclical,Residential Construction,NYQ,1.451,1344045,Yes,,Large
+LSCC,LATTICE SEMICONDUCTOR CORP,Technology,Semiconductors,NMS,1.68,1994708,No,,Large
+RPM,RPM INTERNATIONAL INC,Basic Materials,Specialty Chemicals,NYQ,1.056,1084178,Yes,,Large
+NBIX,NEUROCRINE BIOSCIENCES INC,Healthcare,Drug Manufacturers - Specialty & Generic,NMS,0.356,1144450,No,,Large
+STRL,STERLING INFRASTRUCTURE INC,Industrials,Engineering & Construction,NMS,1.502,504290,No,,Large
+OKTA,OKTA INC CLASS A,Technology,Software - Infrastructure,NMS,0.838,3323283,No,,Large
+CLX,CLOROX,Consumer Defensive,Household & Personal Products,NYQ,0.568,2258316,Yes,,Large
+MAS,MASCO CORP,Industrials,Building Products & Equipment,NYQ,1.246,2667665,Yes,,Large
+FIVE,FIVE BELOW INC,Consumer Cyclical,Specialty Retail,NMS,1.108,1126008,No,,Large
+AFRM,AFFIRM HOLDINGS INC CLASS A,Financial Services,Credit Services,NMS,3.727,6567067,No,,Large
+UNM,UNUM,Financial Services,Insurance - Life,NYQ,0.182,1706404,Yes,,Large
+OHI,OMEGA HEALTHCARE INVESTORS REIT IN,Real Estate,REIT - Healthcare Facilities,NYQ,0.546,2036237,Yes,,Large
+PEN,PENUMBRA INC,Healthcare,Medical Devices,NYQ,0.836,1046226,No,,Large
+DKS,DICKS SPORTING INC,Consumer Cyclical,Specialty Retail,NYQ,1.254,1202490,Yes,,Large
+HAS,HASBRO INC,Consumer Cyclical,Leisure,NMS,0.526,1928988,Yes,,Large
+GWRE,GUIDEWIRE SOFTWARE INC,Technology,Software - Application,NYQ,1.095,1693204,No,,Large
+QXO,QXO INC,Industrials,Industrial Distribution,NYQ,2.418,8161257,No,,Large
+ALLE,ALLEGION PLC,Industrials,Security & Protection Services,NYQ,1.008,912826,Yes,,Large
+ROKU,ROKU INC CLASS A,Communication Services,Entertainment,NMS,2.045,3492839,No,,Large
+RRX,REGAL REXNORD CORP,Industrials,Specialty Industrial Machinery,NYQ,1.034,1119360,Yes,,Large
+BJ,BJS WHOLESALE CLUB HOLDINGS INC,Consumer Defensive,Discount Stores,NYQ,0.332,1955793,No,,Large
+BBY,BEST BUY INC,Consumer Cyclical,Specialty Retail,NYQ,1.444,4945945,Yes,,Large
+CG,CARLYLE GROUP INC,Financial Services,Asset Management,NMS,2.064,3242488,Yes,,Large
+HUBS,HUBSPOT INC,Technology,Software - Application,NYQ,1.446,1699380,No,,Large
+FOXA,FOX CORP CLASS A,Communication Services,Entertainment,NMS,0.537,4215527,Yes,,Large
+SOLS,SOLSTICE ADVANCED MATERIALS INC,Basic Materials,Specialty Chemicals,NMS,,3231224,Yes,,Large
+PNW,PINNACLE WEST CORP,Utilities,Utilities - Regulated Electric,NYQ,0.492,1343250,Yes,,Large
+MKC,MCCORMICK & CO NON-VOTING INC,Consumer Defensive,Packaged Foods,NYQ,0.706,4281377,Yes,,Large
+MLI,MUELLER INDUSTRIES INC,Industrials,Metal Fabrication,NYQ,1.06,818273,Yes,,Large
+ELS,EQUITY LIFESTYLE PROPERTIES REIT I,Real Estate,REIT - Residential,NYQ,0.757,1963342,Yes,,Large
+KTOS,KRATOS DEFENSE AND SECURITY SOLUTI,Industrials,Aerospace & Defense,NMS,1.146,4440001,No,,Large
+CCK,CROWN HOLDINGS INC,Consumer Cyclical,Packaging & Containers,NYQ,0.706,1150829,Yes,,Large
+HL,HECLA MINING,Basic Materials,Other Precious Metals & Mining,NYQ,1.284,24386719,Yes,,Large
+TOST,TOAST INC CLASS A,Technology,Software - Infrastructure,NYQ,1.951,11885193,No,,Large
+FNF,FIDELITY NATIONAL FINANCIAL INC,Financial Services,Insurance - Specialty,NYQ,1.027,1931390,Yes,,Large
+AEIS,ADVANCED ENERGY INDUSTRIES INC,Industrials,Electrical Equipment & Parts,NMS,1.36,761596,Yes,,Large
+GLPI,GAMING AND LEISURE PROPERTIES REIT,Real Estate,REIT - Specialty,NMS,0.681,2436436,Yes,,Large
+MOD,MODINE MANUFACTURING,Consumer Cyclical,Auto Parts,NYQ,1.678,1434695,No,,Large
+SCI,SERVICE,Consumer Cyclical,Personal Services,NYQ,0.996,1159173,Yes,,Large
+EXEL,EXELIXIS INC,Healthcare,Biotechnology,NMS,0.409,2799198,No,,Large
+ROIV,ROIVANT SCIENCES LTD,Healthcare,Biotechnology,NMS,1.207,6387903,No,,Large
+ALGN,ALIGN TECHNOLOGY INC,Healthcare,Medical Instruments & Supplies,NMS,1.823,1258018,No,,Large
+AR,ANTERO RESOURCES CORP,Energy,Oil & Gas E&P,NYQ,0.5,6446667,No,,Large
+IONS,IONIS PHARMACEUTICALS INC,Healthcare,Biotechnology,NMS,0.364,2351159,No,,Large
+BWA,BORGWARNER INC,Consumer Cyclical,Auto Parts,NYQ,1.025,3030611,Yes,,Large
+HEI,HEICO CORP,Industrials,Aerospace & Defense,NYQ,1.025,611572,Yes,,Large
+BBIO,BRIDGEBIO PHARMA INC,Healthcare,Biotechnology,NMS,1.18,2868632,No,,Large
+GL,GLOBE LIFE INC,Financial Services,Insurance - Life,NYQ,0.455,510186,Yes,,Large
+JKHY,JACK HENRY AND ASSOCIATES INC,Technology,Information Technology Services,NMS,0.726,994132,Yes,,Large
+JAZZ,JAZZ PHARMACEUTICALS PLC,Healthcare,Biotechnology,NMS,0.234,1029214,No,,Large
+GNRC,GENERAC HOLDINGS INC,Industrials,Specialty Industrial Machinery,NYQ,1.769,1206196,No,,Large
+RIVN,RIVIAN AUTOMOTIVE INC CLASS A,Consumer Cyclical,Auto Manufacturers,NMS,1.749,30354021,No,,Large
+DOC,HEALTHPEAK PROPERTIES INC,Real Estate,REIT - Healthcare Facilities,NYQ,1.081,9397593,Yes,,Large
+SMCI,SUPER MICRO COMPUTER INC,Technology,Computer Hardware,NMS,1.487,37610404,No,,Large
+WBS,WEBSTER FINANCIAL CORP,Financial Services,Banks - Regional,NYQ,1.039,4495118,Yes,,Large
+TEAM,ATLASSIAN CORP CLASS A,Technology,Software - Application,NMS,0.981,6395959,No,,Large
+FHN,FIRST HORIZON CORP,Financial Services,Banks - Regional,NYQ,0.62,6342219,Yes,,Large
+DPZ,DOMINOS PIZZA INC,Consumer Cyclical,Restaurants,NMS,1.162,951854,Yes,,Large
+ACM,AECOM,Industrials,Engineering & Construction,NYQ,1.044,1501004,Yes,,Large
+SF,STIFEL FINANCIAL CORP,Financial Services,Capital Markets,NYQ,1.133,1593022,Yes,,Large
+UDR,UDR REIT INC,Real Estate,REIT - Residential,NYQ,0.691,4313083,Yes,,Large
+EVR,EVERCORE INC CLASS A,Financial Services,Capital Markets,NYQ,1.575,597404,Yes,,Large
+ELAN,ELANCO ANIMAL HEALTH INC,Healthcare,Drug Manufacturers - Specialty & Generic,NYQ,1.885,5129581,No,,Large
+WTRG,ESSENTIAL UTILITIES INC,Utilities,Utilities - Regulated Water,NYQ,0.797,2457778,Yes,,Large
+GH,GUARDANT HEALTH INC,Healthcare,Diagnostics & Research,NMS,1.688,2031022,No,,Large
+AGNC,AGNC INVESTMENT REIT CORP,Real Estate,REIT - Mortgage,NMS,1.351,22506018,Yes,,Large
+GDDY,GODADDY INC CLASS A,Technology,Software - Infrastructure,NYQ,0.979,2219988,No,,Large
+TXRH,TEXAS ROADHOUSE INC,Consumer Cyclical,Restaurants,NMS,0.866,1002409,Yes,,Large
+LAMR,LAMAR ADVERTISING COMPANY CLAS,Real Estate,REIT - Specialty,NMS,1.225,560904,Yes,,Large
+ARMK,ARAMARK,Industrials,Specialty Business Services,NYQ,1.154,3020522,Yes,,Large
+DT,DYNATRACE INC,Technology,Software - Application,NYQ,0.835,7007586,No,,Large
+IT,GARTNER INC,Technology,Information Technology Services,NYQ,1.083,1629486,No,,Large
+SWK,STANLEY BLACK & DECKER INC,Industrials,Tools & Accessories,NYQ,1.149,1878886,Yes,,Large
+EQH,EQUITABLE HOLDINGS INC,Financial Services,Asset Management,NYQ,1.099,3567752,Yes,,Large
+PINS,PINTEREST INC CLASS A,Communication Services,Internet Content & Information,NYQ,0.953,19735426,No,,Large
+CPT,CAMDEN PROPERTY TRUST REIT,Real Estate,REIT - Residential,NYQ,0.821,1250818,Yes,,Large
+ALLY,ALLY FINANCIAL INC,Financial Services,Credit Services,NYQ,1.155,3926637,Yes,,Large
+BMRN,BIOMARIN PHARMACEUTICAL INC,Healthcare,Biotechnology,NMS,0.256,2190234,No,,Large
+DKNG,DRAFTKINGS INC CLASS A,Consumer Cyclical,Gambling,NMS,1.682,15901509,No,,Large
+ONTO,ONTO INNOVATION INC,Technology,Semiconductor Equipment & Materials,NYQ,1.475,918001,No,,Large
+DCI,DONALDSON INC,Industrials,Specialty Industrial Machinery,NYQ,1.045,761513,Yes,,Mid
+ZBRA,ZEBRA TECHNOLOGIES CORP CLASS A,Technology,Communication Equipment,NMS,1.679,777221,No,,Large
+RVTY,REVVITY INC,Healthcare,Diagnostics & Research,NYQ,1.107,1339701,Yes,,Mid
+CRCL,CIRCLE INTERNET GROUP INC CLASS A,Financial Services,Capital Markets,NYQ,,16109860,No,,Large
+TTMI,TTM TECHNOLOGIES INC,Technology,Electronic Components,NMS,1.761,2579663,No,,Large
+ALSN,ALLISON TRANSMISSION HOLDINGS INC,Consumer Cyclical,Auto Parts,NYQ,0.949,890904,Yes,,Mid
+GEN,GEN DIGITAL INC,Technology,Software - Infrastructure,NMS,1.095,6814857,Yes,,Large
+RRC,RANGE RESOURCES CORP,Energy,Oil & Gas E&P,NYQ,0.568,3526695,Yes,,Large
+FLS,FLOWSERVE CORP,Industrials,Specialty Industrial Machinery,NYQ,1.284,1600283,Yes,,Mid
+AES,AES CORP,Utilities,Utilities - Diversified,NYQ,0.941,13410313,Yes,,Large
+OGE,OGE ENERGY CORP,Utilities,Utilities - Regulated Electric,NYQ,0.577,1695942,Yes,,Large
+IOT,SAMSARA INC CLASS A,Technology,Software - Infrastructure,NYQ,1.598,8569298,No,,Large
+EHC,ENCOMPASS HEALTH CORP,Healthcare,Medical Care Facilities,NYQ,0.56,1195872,Yes,,Mid
+DAR,DARLING INGREDIENTS INC,Consumer Defensive,Packaged Foods,NYQ,1.21,2897957,No,,Large
+RMBS,RAMBUS INC,Technology,Semiconductors,NMS,1.589,2464103,No,,Large
+TTD,TRADE DESK INC CLASS A,Communication Services,Advertising Agencies,NGM,1.19,18639957,No,,Large
+CNM,CORE & MAIN INC CLASS A,Industrials,Industrial Distribution,NYQ,0.978,2333098,No,,Mid
+GMED,GLOBUS MEDICAL INC CLASS A,Healthcare,Medical Devices,NYQ,1.069,1278888,No,,Large
+WMS,ADVANCED DRAINAGE SYSTEMS INC,Industrials,Building Products & Equipment,NYQ,1.305,812559,Yes,,Large
+DINO,HF SINCLAIR CORP,Energy,Oil & Gas Refining & Marketing,NYQ,0.844,3047985,Yes,,Large
+SJM,JM SMUCKER,Consumer Defensive,Packaged Foods,NYQ,0.176,2086052,Yes,,Large
+BAH,BOOZ ALLEN HAMILTON HOLDING CORP C,Industrials,Consulting Services,NYQ,0.359,2486083,Yes,,Large
+DOCU,DOCUSIGN INC,Technology,Software - Application,NMS,1.064,5060927,No,,Mid
+CNH,CNH INDUSTRIAL N.V. NV,Industrials,Farm & Heavy Construction Machinery,NYQ,1.319,15322426,Yes,,Large
+NTNX,NUTANIX INC CLASS A,Technology,Software - Infrastructure,NMS,0.528,4839977,No,,Large
+NWSA,NEWS CORP CLASS A,Communication Services,Entertainment,NMS,0.969,4445796,Yes,,Large
+UHS,UNIVERSAL HEALTH SERVICES INC CLAS,Healthcare,Medical Care Facilities,NYQ,1.261,782834,Yes,,Large
+SOLV,SOLVENTUM CORP,Healthcare,Medical Instruments & Supplies,NYQ,0.543,1235813,No,,Large
+SAIA,SAIA INC,Industrials,Trucking,NMS,2.026,570347,No,,Mid
+GTLS,CHART INDUSTRIES INC,Industrials,Specialty Industrial Machinery,NYQ,1.754,1482077,No,,Mid
+IONQ,IONQ INC,Technology,Computer Hardware,NYQ,2.803,21226470,No,,Large
+OSK,OSHKOSH CORP,Industrials,Farm & Heavy Construction Machinery,NYQ,1.354,802247,Yes,,Mid
+AMH,AMERICAN HOMES RENT REIT CLASS A,Real Estate,REIT - Residential,NYQ,0.794,4477716,Yes,,Large
+SSB,SOUTHSTATE BANK CORP,Financial Services,Banks - Regional,NYQ,0.734,880378,Yes,,Mid
+ORI,OLD REPUBLIC INTERNATIONAL CORP,Financial Services,Insurance - Property & Casualty,NYQ,0.747,2030175,Yes,,Mid
+GME,GAMESTOP CORP CLASS A,Consumer Cyclical,Specialty Retail,NYQ,1.886,7388616,No,,Large
+OC,OWENS CORNING,Industrials,Building Products & Equipment,NYQ,1.319,1498950,Yes,,Mid
+TTC,TORO,Industrials,Tools & Accessories,NYQ,0.802,951613,Yes,,Mid
+IVZ,INVESCO LTD,Financial Services,Asset Management,NYQ,1.634,5819767,Yes,,Large
+BPOP,POPULAR INC,Financial Services,Banks - Regional,NMS,0.623,573072,Yes,,Mid
+KNX,KNIGHT-SWIFT TRANSPORTATION HOLDIN,Industrials,Trucking,NYQ,1.103,3314863,Yes,,Mid
+CRL,CHARLES RIVER LABORATORIES INTERNA,Healthcare,Diagnostics & Research,NYQ,1.652,991639,No,,Mid
+EMN,EASTMAN CHEMICAL,Basic Materials,Specialty Chemicals,NYQ,1.221,1787118,Yes,,Mid
+WTFC,WINTRUST FINANCIAL CORP,Financial Services,Banks - Regional,NMS,0.856,515140,Yes,,Mid
+BLDR,BUILDERS FIRSTSOURCE INC,Industrials,Building Products & Equipment,NYQ,1.564,2363332,No,,Mid
+FRT,FEDERAL REALTY INVESTMENT TRUST RE,Real Estate,REIT - Retail,NYQ,1.011,832857,Yes,,Mid
+SN,SHARKNINJA INC,Consumer Cyclical,"Furnishings, Fixtures & Appliances",NYQ,1.338,1845622,No,,Large
+BRX,BRIXMOR PROPERTY GROUP REIT INC,Real Estate,REIT - Retail,NYQ,1.051,3017029,Yes,,Mid
+FDS,FACTSET RESEARCH SYSTEMS INC,Financial Services,Financial Data & Stock Exchanges,NYQ,0.724,1005403,Yes,,Mid
+ZION,ZIONS BANCORPORATION,Financial Services,Banks - Regional,NMS,0.822,1908954,Yes,,Mid
+COLB,COLUMBIA BANKING SYSTEM INC,Financial Services,Banks - Regional,NMS,0.684,2977763,Yes,,Mid
+AHR,AMERICAN HEALTHCARE REIT INC,Real Estate,REIT - Healthcare Facilities,NYQ,0.935,2900972,Yes,,Mid
+BAX,BAXTER INTERNATIONAL INC,Healthcare,Medical Instruments & Supplies,NYQ,0.553,10227822,Yes,,Mid
+NFG,NATIONAL FUEL GAS,Energy,Oil & Gas Integrated,NYQ,0.563,819352,Yes,,Mid
+VNOM,VIPER ENERGY INC CLASS A,Energy,Oil & Gas Midstream,NMS,0.329,3393713,Yes,,Large
+AFG,AMERICAN FINANCIAL GROUP INC,Financial Services,Insurance - Property & Casualty,NYQ,0.67,668893,Yes,,Large
+CFR,CULLEN FROST BANKERS INC,Financial Services,Banks - Regional,NYQ,0.618,568563,Yes,,Mid
+TECH,BIO TECHNE CORP,Healthcare,Biotechnology,NMS,1.475,2447627,Yes,,Mid
+UMBF,UMB FINANCIAL CORP,Financial Services,Banks - Regional,NMS,0.773,559290,Yes,,Mid
+CGNX,COGNEX CORP,Technology,Scientific & Technical Instruments,NMS,1.47,2202816,Yes,,Mid
+ADC,AGREE REALTY REIT CORP,Real Estate,REIT - Retail,NYQ,0.51,1364722,Yes,,Mid
+NCLH,NORWEGIAN CRUISE LINE HOLDINGS LTD,Consumer Cyclical,Travel Services,NYQ,2.044,22450506,No,,Mid
+CTRE,CARETRUST REIT INC,Real Estate,REIT - Healthcare Facilities,NYQ,0.761,2681840,Yes,,Mid
+MANH,MANHATTAN ASSOCIATES INC,Technology,Software - Application,NMS,1.069,805995,No,,Mid
+ARWR,ARROWHEAD PHARMACEUTICALS INC,Healthcare,Biotechnology,NMS,1.3,3000195,No,,Mid
+MOS,MOSAIC,Basic Materials,Agricultural Inputs,NYQ,0.946,9154026,Yes,,Mid
+PL,PLANET LABS CLASS A,Industrials,Aerospace & Defense,NYQ,1.957,13986918,No,,Large
+QGEN,QIAGEN NV,Healthcare,Diagnostics & Research,NYQ,0.709,2480647,Yes,,Mid
+ATR,APTARGROUP INC,Healthcare,Medical Instruments & Supplies,NYQ,0.437,532247,Yes,,Mid
+TTEK,TETRA TECH INC,Industrials,Engineering & Construction,NMS,0.92,2961681,Yes,,Mid
+SWKS,SKYWORKS SOLUTIONS INC,Technology,Semiconductors,NMS,1.3,3830906,Yes,,Mid
+HALO,HALOZYME THERAPEUTICS INC,Healthcare,Biotechnology,NMS,1.019,1870365,No,,Mid
+CYTK,CYTOKINETICS INC,Healthcare,Biotechnology,NMS,0.508,1933326,No,,Mid
+FLR,FLUOR CORP,Industrials,Engineering & Construction,NYQ,1.278,2847550,No,,Mid
+CUBE,CUBESMART REIT,Real Estate,REIT - Industrial,NYQ,1.112,2461455,Yes,,Mid
+HSIC,HENRY SCHEIN INC,Healthcare,Medical Distribution,NMS,0.852,1379636,No,,Mid
+CAVA,CAVA GROUP INC,Consumer Cyclical,Restaurants,NYQ,2.176,3684167,No,,Mid
+BXP,BXP INC,Real Estate,REIT - Office,NYQ,1.032,2683827,Yes,,Mid
+FOX,FOX CORP CLASS B,Communication Services,Entertainment,NMS,0.537,1892091,Yes,,Large
+CRUS,CIRRUS LOGIC INC,Technology,Semiconductors,NMS,1.124,646219,No,,Mid
+KEX,KIRBY CORP,Industrials,Marine Shipping,NYQ,0.859,799600,No,,Mid
+TIGO,MILLICOM INTERNATIONAL CELLULAR SA,Communication Services,Telecom Services,NMS,0.899,1380281,Yes,,Large
+ARW,ARROW ELECTRONICS INC,Technology,Electronics & Computer Distribution,NYQ,0.997,608570,No,,Mid
+CHRD,CHORD ENERGY CORP,Energy,Oil & Gas E&P,NMS,0.712,1046750,Yes,,Mid
+SEIC,SEI INVESTMENTS,Financial Services,Asset Management,NMS,0.947,782413,Yes,,Mid
+WYNN,WYNN RESORTS LTD,Consumer Cyclical,Resorts & Casinos,NMS,1.034,1704524,Yes,,Large
+REXR,REXFORD INDUSTRIAL REALTY REIT INC,Real Estate,REIT - Industrial,NYQ,1.251,2705873,Yes,,Mid
+HLI,HOULIHAN LOKEY INC CLASS A,Financial Services,Capital Markets,NYQ,0.963,602359,Yes,,Mid
+ONB,OLD NATIONAL BANCORP,Financial Services,Banks - Regional,NMS,0.829,3201398,Yes,,Mid
+NNN,NNN REIT INC,Real Estate,REIT - Retail,NYQ,0.821,1531450,Yes,,Mid
+AOS,A O SMITH CORP,Industrials,Specialty Industrial Machinery,NYQ,1.304,1435857,Yes,,Mid
+LKQ,LKQ CORP,Consumer Cyclical,Auto Parts,NMS,0.871,2717606,Yes,,Mid
+SM,SM ENERGY,Energy,Oil & Gas E&P,NYQ,0.99,7157221,Yes,,Mid
+AXS,AXIS CAPITAL HOLDINGS LTD,Financial Services,Insurance - Specialty,NYQ,0.632,636857,Yes,,Mid
+FORM,FORMFACTOR INC,Technology,Semiconductor Equipment & Materials,NMS,1.05,1506616,No,,Mid
+PRIM,PRIMORIS SERVICES CORP,Industrials,Engineering & Construction,NYQ,1.391,794636,Yes,,Mid
+VIAV,VIAVI SOLUTIONS INC,Technology,Communication Equipment,NMS,0.946,5680609,No,,Mid
+MASI,MASIMO CORP,Healthcare,Medical Devices,NMS,1.248,1682347,No,,Mid
+WAL,WESTERN ALLIANCE,Financial Services,Banks - Regional,NYQ,1.344,1416375,Yes,,Mid
+ONON,ON HOLDING AG CLASS A,Consumer Cyclical,Footwear & Accessories,NYQ,2.145,6194450,No,,Large
+SMTC,SEMTECH CORP,Technology,Semiconductors,NMS,2.035,1925255,No,,Mid
+ESI,ELEMENT SOLUTIONS INC,Basic Materials,Specialty Chemicals,NYQ,1.25,2840045,Yes,,Mid
+XP,XP CLASS A INC,Financial Services,Capital Markets,NMS,1.256,6864131,Yes,,Mid
+UGI,UGI CORP,Utilities,Utilities - Regulated Gas,NYQ,1.087,2027404,Yes,,Mid
+FR,FIRST INDUSTRIAL REALTY TRUST INC,Real Estate,REIT - Industrial,NYQ,1.116,1110060,Yes,,Mid
+EPAM,EPAM SYSTEMS INC,Technology,Information Technology Services,NYQ,1.768,1194386,No,,Mid
+MGM,MGM RESORTS INTERNATIONAL,Consumer Cyclical,Resorts & Casinos,NYQ,1.396,5073709,No,,Large
+AM,ANTERO MIDSTREAM CORP,Energy,Oil & Gas Midstream,NYQ,0.747,2972927,Yes,,Large
+AWI,ARMSTRONG WORLD INDUSTRIES INC,Industrials,Building Products & Equipment,NYQ,1.332,577011,Yes,,Mid
+SFM,SPROUTS FARMERS MARKET INC,Consumer Defensive,Grocery Stores,NMS,0.7,2965185,No,,Mid
+DOX,AMDOCS LTD,Technology,Software - Infrastructure,NMS,0.454,1352998,Yes,,Mid
+MTDR,MATADOR RESOURCES,Energy,Oil & Gas E&P,NYQ,1.05,1984240,Yes,,Mid
+INGR,INGREDION INC,Consumer Defensive,Packaged Foods,NYQ,0.69,676503,Yes,,Mid
+CMC,COMMERCIAL METALS,Industrials,Metal Fabrication,NYQ,1.468,1336426,Yes,,Mid
+TAP,MOLSON COORS BREWING CLASS B,Consumer Defensive,Beverages - Brewers,NYQ,0.449,3089396,Yes,,Mid
+W,WAYFAIR INC CLASS A,Consumer Cyclical,Internet Retail,NYQ,3.41,3674985,No,,Mid
+MTCH,MATCH GROUP INC,Communication Services,Internet Content & Information,NMS,1.341,5458103,Yes,,Mid
+ARE,ALEXANDRIA REAL ESTATE EQUITIES RE,Real Estate,REIT - Office,NYQ,1.319,2558465,Yes,,Mid
+NOV,NOV INC,Energy,Oil & Gas Equipment & Services,NYQ,0.929,5047413,Yes,,Mid
+CAG,CONAGRA BRANDS INC,Consumer Defensive,Packaged Foods,NYQ,,14683032,Yes,,Mid
+PCVX,VAXCYTE INC,Healthcare,Biotechnology,NMS,1.382,1430488,No,,Mid
+MOH,MOLINA HEALTHCARE INC,Healthcare,Healthcare Plans,NYQ,0.5,1903518,No,,Mid
+AAL,AMERICAN AIRLINES GROUP INC,Industrials,Airlines,NMS,1.194,66774001,No,,Mid
+PCOR,PROCORE TECHNOLOGIES INC,Technology,Software - Application,NYQ,0.898,2518260,No,,Mid
+AGCO,AGCO CORP,Industrials,Farm & Heavy Construction Machinery,NYQ,1.111,792604,Yes,,Mid
+HQY,HEALTHEQUITY INC,Healthcare,Health Information Services,NMS,0.317,1037122,No,,Mid
+U,UNITY SOFTWARE INC,Technology,Software - Application,NYQ,2.181,18792904,No,,Mid
+AXSM,AXSOME THERAPEUTICS INC,Healthcare,Biotechnology,NGM,0.487,640367,No,,Mid
+LUMN,LUMEN TECHNOLOGIES INC,Communication Services,Telecom Services,NYQ,1.566,13496311,No,,Mid
+RBRK,RUBRIK INC CLASS A,Technology,Software - Infrastructure,NYQ,,4125216,No,,Large
+CE,CELANESE CORP,Basic Materials,Chemicals,NYQ,1.055,2630922,Yes,,Mid
+JXN,JACKSON FINANCIAL INC CLASS A,Financial Services,Insurance - Life,NYQ,1.471,622081,Yes,,Mid
+MP,MP MATERIALS CORP CLASS A,Basic Materials,Other Industrial Metals & Mining,NYQ,1.622,7518527,No,,Mid
+AL,AIR LEASE CORP CLASS A,Industrials,Rental & Leasing Services,NYQ,1.116,2048711,Yes,,Mid
+AVAV,AEROVIRONMENT INC,Industrials,Aerospace & Defense,NMS,1.259,1883603,No,,Mid
+ORA,ORMAT TECH INC,Utilities,Utilities - Renewable,NYQ,0.868,816501,Yes,,Mid
+WFRD,WEATHERFORD INTERNATIONAL PLC,Energy,Oil & Gas Equipment & Services,NMS,0.739,1386155,Yes,,Mid
+SANM,SANMINA CORP,Technology,Electronic Components,NMS,0.982,830934,No,,Mid
+STAG,STAG INDUSTRIAL REIT INC,Real Estate,REIT - Industrial,NYQ,1.034,1525047,Yes,,Mid
+Z,ZILLOW GROUP INC CLASS C,Communication Services,Internet Content & Information,NMS,2.14,4569827,No,,Mid
+TEX,TEREX CORP,Industrials,Farm & Heavy Construction Machinery,NYQ,1.609,1974586,Yes,,Mid
+JHG,JANUS HENDERSON GROUP PLC,Financial Services,Asset Management,NYQ,1.518,3039157,Yes,,Mid
+JBTM,JBT MAREL CORP,Industrials,Specialty Industrial Machinery,NYQ,1.014,599518,Yes,,Mid
+CART,MAPLEBEAR INC,Consumer Cyclical,Internet Retail,NMS,0.987,5138854,No,,Large
+DOCN,DIGITALOCEAN HOLDINGS INC,Technology,Software - Infrastructure,NYQ,1.761,3736727,No,,Mid
+POOL,POOL CORP,Industrials,Industrial Distribution,NMS,1.247,843490,Yes,,Mid
+CWAN,CLEARWATER ANALYTICS HOLDINGS INC,Technology,Software - Application,NYQ,0.664,10137052,No,,Mid
+LEA,LEAR CORP,Consumer Cyclical,Auto Parts,NYQ,1.255,583791,Yes,,Mid
+ZWS,ZURN ELKAY WATER SOLUTIONS CORP,Industrials,Pollution & Treatment Controls,NYQ,0.77,1025206,Yes,,Mid
+QRVO,QORVO INC,Technology,Semiconductors,NMS,1.35,1380544,No,,Mid
+VOYA,VOYA FINANCIAL INC,Financial Services,Financial Conglomerates,NYQ,0.892,1030454,Yes,,Mid
+OMF,ONEMAIN HOLDINGS INC,Financial Services,Credit Services,NYQ,1.289,1624400,Yes,,Mid
+SLAB,SILICON LABORATORIES INC,Technology,Semiconductors,NMS,1.501,762488,No,,Mid
+HXL,HEXCEL CORP,Industrials,Aerospace & Defense,NYQ,1.008,1321406,Yes,,Mid
+RGEN,REPLIGEN CORP,Healthcare,Medical Instruments & Supplies,NMS,1.183,836832,No,,Mid
+CBSH,COMMERCE BANCSHARES INC,Financial Services,Banks - Regional,NMS,0.596,1353118,Yes,,Mid
+EAT,BRINKER INTERNATIONAL INC,Consumer Cyclical,Restaurants,NYQ,1.359,1237985,No,,Mid
+HRL,HORMEL FOODS CORP,Consumer Defensive,Packaged Foods,NYQ,0.312,4751727,Yes,,Large
+EXP,EAGLE MATERIALS INC,Basic Materials,Building Materials,NYQ,1.348,504029,Yes,,Mid
+TKR,TIMKEN,Industrials,Tools & Accessories,NYQ,1.181,830154,Yes,,Mid
+UEC,URANIUM ENERGY CORP,Energy,Uranium,ASE,1.143,10835740,No,,Mid
+BEN,FRANKLIN RESOURCES INC,Financial Services,Asset Management,NYQ,1.461,5552088,Yes,,Large
+MIDD,MIDDLEBY CORP,Industrials,Specialty Industrial Machinery,NMS,1.345,615255,No,,Mid
+JEF,JEFFERIES FINANCIAL GROUP INC,Financial Services,Capital Markets,NYQ,,3156347,Yes,,Mid
+PAYC,PAYCOM SOFTWARE INC,Technology,Software - Application,NYQ,0.812,1895603,Yes,,Mid
+H,HYATT HOTELS CORP CLASS A,Consumer Cyclical,Lodging,NYQ,1.256,880273,Yes,,Large
+AXTA,AXALTA COATING SYSTEMS LTD,Basic Materials,Specialty Chemicals,NYQ,1.279,3284368,No,,Mid
+RYN,RAYONIER REIT INC,Real Estate,REIT - Specialty,NYQ,1.013,3303419,Yes,,Mid
+SSRM,SSR MINING INC,Basic Materials,Gold,NMS,0.864,4318281,No,,Mid
+GKOS,GLAUKOS CORP,Healthcare,Medical Devices,NYQ,0.743,806219,No,,Mid
+CHWY,CHEWY INC CLASS A,Consumer Cyclical,Internet Retail,NYQ,1.612,8458893,No,,Large
+PB,PROSPERITY BANCSHARES INC,Financial Services,Banks - Regional,NYQ,0.67,1283001,Yes,,Mid
+GXO,GXO LOGISTICS INC,Industrials,Integrated Freight & Logistics,NYQ,1.695,1332055,No,,Mid
+KMX,CARMAX INC,Consumer Cyclical,Auto & Truck Dealerships,NYQ,1.329,3408918,No,,Mid
+PTGX,PROTAGONIST THERAPEUTICS INC,Healthcare,Biotechnology,NGM,2.239,819565,No,,Mid
+MTG,MGIC INVESTMENT CORP,Financial Services,Insurance - Specialty,NYQ,0.798,2256965,Yes,,Mid
+ECG,EVERUS CONSTRUCTION GROUP INC,Industrials,Engineering & Construction,NYQ,,692254,No,,Mid
+POR,PORTLAND GENERAL ELECTRIC,Utilities,Utilities - Regulated Electric,NYQ,0.645,1332372,Yes,,Mid
+FAF,FIRST AMERICAN FINANCIAL CORP,Financial Services,Insurance - Specialty,NYQ,1.261,1095286,Yes,,Mid
+BROS,DUTCH BROS INC CLASS A,Consumer Cyclical,Restaurants,NYQ,2.549,4966021,No,,Mid
+PLNT,PLANET FITNESS INC CLASS A,Consumer Cyclical,Leisure,NYQ,1.296,1925875,No,,Mid
+WH,WYNDHAM HOTELS RESORTS INC,Consumer Cyclical,Lodging,NYQ,0.723,1411939,Yes,,Mid
+NE,NOBLE CORPORATION PLC,Energy,Oil & Gas Drilling,NYQ,1.073,2147526,Yes,,Mid
+MKTX,MARKETAXESS HOLDINGS INC,Financial Services,Capital Markets,NMS,0.966,561281,Yes,,Mid
+SNEX,STONEX GROUP INC,Financial Services,Capital Markets,NMS,0.396,674398,No,,Mid
+SARO,STANDARDAERO,Industrials,Aerospace & Defense,NYQ,,4640455,No,,Mid
+ACI,ALBERTSONS COMPANY INC CLASS A,Consumer Defensive,Grocery Stores,NYQ,0.254,7375536,Yes,,Mid
+EPRT,ESSENTIAL PROPERTIES REALTY TRUST,Real Estate,REIT - Retail,NYQ,0.989,2096711,Yes,,Mid
+AROC,ARCHROCK INC,Energy,Oil & Gas Equipment & Services,NYQ,0.912,1680216,Yes,,Mid
+G,GENPACT LTD,Technology,Information Technology Services,NYQ,0.742,2239681,Yes,,Mid
+FNB,FNB CORP,Financial Services,Banks - Regional,NYQ,0.913,7539272,Yes,,Mid
+SITE,SITEONE LANDSCAPE SUPPLY INC,Industrials,Industrial Distribution,NYQ,1.587,684803,No,,Mid
+STWD,STARWOOD PROPERTY TRUST REIT INC,Real Estate,REIT - Mortgage,NYQ,1.114,3591049,Yes,,Mid
+TMHC,TAYLOR MORRISON HOME CORP,Consumer Cyclical,Residential Construction,NYQ,1.562,1100173,No,,Mid
+TRNO,TERRENO REALTY REIT CORP,Real Estate,REIT - Industrial,NYQ,1.135,724768,Yes,,Mid
+LNC,LINCOLN NATIONAL CORP,Financial Services,Insurance - Life,NYQ,1.285,2356449,Yes,,Mid
+VFC,VF CORP,Consumer Cyclical,Apparel Manufacturing,NYQ,0.974,6881034,Yes,,Mid
+GBCI,GLACIER BANCORP INC,Financial Services,Banks - Regional,NYQ,0.746,1067804,Yes,,Mid
+OKLO,OKLO INC CLASS A,Utilities,Utilities - Independent Power Producers,NYQ,0.819,10410470,No,,Mid
+OLLI,OLLIES BARGAIN OUTLET HOLDINGS INC,Consumer Defensive,Discount Stores,NGM,0.529,1244047,No,,Mid
+AMKR,AMKOR TECHNOLOGY INC,Technology,Semiconductor Equipment & Materials,NMS,1.973,4500293,Yes,,Large
+RIG,TRANSOCEAN LTD,Energy,Oil & Gas Drilling,NYQ,1.42,46994681,No,,Mid
+VLY,VALLEY NATIONAL,Financial Services,Banks - Regional,NMS,1.065,8412988,Yes,,Mid
+CHDN,CHURCHILL DOWNS INC,Consumer Cyclical,Gambling,NMS,0.66,957140,Yes,,Mid
+SEE,SEALED AIR CORP,Consumer Cyclical,Packaging & Containers,NYQ,1.342,3082745,Yes,,Mid
+APLD,APPLIED DIGITAL CORP,Technology,Information Technology Services,NMS,7.342,27047303,No,,Mid
+AAOI,APPLIED OPTOELECTRONICS INC,Technology,Communication Equipment,NGM,3.274,8603011,No,,Mid
+CZR,CAESARS ENTERTAINMENT INC,Consumer Cyclical,Resorts & Casinos,NMS,1.977,6398463,No,,Mid
+VNT,VONTIER CORP,Technology,Scientific & Technical Instruments,NYQ,1.292,1158670,Yes,,Mid
+DVA,DAVITA INC,Healthcare,Medical Care Facilities,NYQ,0.931,1096419,No,,Mid
+ESNT,ESSENT GROUP LTD,Financial Services,Insurance - Specialty,NYQ,0.874,764022,Yes,,Mid
+ESAB,ESAB CORP,Industrials,Metal Fabrication,NYQ,1.196,531557,Yes,,Mid
+GAP,GAP INC,Consumer Cyclical,Apparel Retail,NYQ,2.239,8250465,Yes,,Mid
+TFX,TELEFLEX INC,Healthcare,Medical Instruments & Supplies,NYQ,0.861,986442,Yes,,Mid
+HWC,HANCOCK WHITNEY CORP,Financial Services,Banks - Regional,NMS,1.042,883045,Yes,,Mid
+VAL,VALARIS LTD,Energy,Oil & Gas Equipment & Services,NYQ,1.072,1624040,No,,Mid
+CELH,CELSIUS HOLDINGS INC,Consumer Defensive,Beverages - Non-Alcoholic,NCM,0.956,5601239,No,,Mid
+MUR,MURPHY OIL CORP,Energy,Oil & Gas E&P,NYQ,0.728,2803424,Yes,,Mid
+SWX,SOUTHWEST GAS HOLDINGS INC,Utilities,Utilities - Regulated Gas,NYQ,0.603,672836,Yes,,Mid
+HR,HEALTHCARE REALTY TRUST INC CLASS,Real Estate,REIT - Healthcare Facilities,NYQ,0.79,3703509,Yes,,Mid
+AUB,ATLANTIC UNION BANKSHARES CORP,Financial Services,Banks - Regional,NYQ,0.81,1114560,Yes,,Mid
+LW,LAMB WESTON HOLDINGS INC,Consumer Defensive,Packaged Foods,NYQ,,3301460,Yes,,Mid
+UBSI,UNITED BANKSHARES INC,Financial Services,Banks - Regional,NMS,0.774,995798,Yes,,Mid
+CNR,CORE NATURAL RESOURCES INC,Energy,Thermal Coal,NYQ,0.252,943824,Yes,,Mid
+LSTR,LANDSTAR SYSTEM INC,Industrials,Integrated Freight & Logistics,NMS,0.812,572378,Yes,,Mid
+ALKS,ALKERMES,Healthcare,Drug Manufacturers - Specialty & Generic,NMS,0.492,2392375,No,,Mid
+TXNM,TXNM ENERGY INC,Utilities,Utilities - Regulated Electric,NYQ,0.172,1188262,Yes,,Mid
+AAON,AAON INC,Industrials,Building Products & Equipment,NMS,1.13,927729,Yes,,Mid
+GTES,GATES INDUSTRIAL PLC,Industrials,Specialty Industrial Machinery,NYQ,1.226,2597019,No,,Mid
+MGY,MAGNOLIA OIL GAS CORP CLASS A,Energy,Oil & Gas E&P,NYQ,0.922,3165336,Yes,,Mid
+GFS,GLOBALFOUNDRIES INC,Technology,Semiconductors,NMS,1.469,4101908,No,,Large
+LBRDK,LIBERTY BROADBAND CORP SERIES C,Communication Services,Telecom Services,NMS,0.958,1231229,No,,Mid
+NJR,NEW JERSEY RESOURCES CORP,Utilities,Utilities - Regulated Gas,NYQ,0.585,570509,Yes,,Mid
+VSNT,VERSANT MEDIA GROUP INC,Communication Services,Entertainment,NMS,,4730149,Yes,,Mid
+BTSG,BRIGHTSPRING HEALTH SERVICES INC,Healthcare,Health Information Services,NMS,2.327,2482565,No,,Mid
+SON,SONOCO PRODUCTS,Consumer Cyclical,Packaging & Containers,NYQ,0.483,1016963,Yes,,Mid
+BSY,BENTLEY SYSTEMS INC CLASS B,Technology,Software - Application,NMS,1.179,3193324,Yes,,Large
+RITM,RITHM CAPITAL CORP,Real Estate,REIT - Mortgage,NYQ,1.199,12203640,Yes,,Mid
+RHP,RYMAN HOSPITALITY PROPERTIES REIT,Real Estate,REIT - Hotel & Motel,NYQ,1.192,508980,Yes,,Mid
+HOMB,HOME BANCSHARES INC,Financial Services,Banks - Regional,NYQ,0.757,1408454,Yes,,Mid
+LNTH,LANTHEUS HOLDINGS INC,Healthcare,Drug Manufacturers - Specialty & Generic,NGM,-0.14,976459,No,,Mid
+ST,SENSATA TECHNOLOGIES HOLDING PLC,Technology,Scientific & Technical Instruments,NYQ,1.131,1917219,Yes,,Mid
+OWL,BLUE OWL CAPITAL INC CLASS A,Financial Services,Asset Management,NYQ,1.169,28947229,Yes,,Large
+KGS,KODIAK GAS SERVICES INC,Energy,Oil & Gas Equipment & Services,NYQ,1.024,1542008,Yes,,Mid
+VSAT,VIASAT INC,Technology,Communication Equipment,NMS,1.488,1765767,No,,Mid
+CWST,CASELLA WASTE SYSTEMS INC CLASS A,Industrials,Waste Management,NMS,0.784,778286,No,,Mid
+BKH,BLACK HILLS CORP,Utilities,Utilities - Regulated Gas,NYQ,0.704,1014885,Yes,,Mid
+NUVL,NUVALENT INC CLASS A,Healthcare,Biotechnology,NMS,1.324,562221,No,,Mid
+BEPC,BROOKFIELD RENEWABLE SUBORDINATE V,Utilities,Utilities - Renewable,NYQ,1.233,1215422,Yes,,Mid
+CRC,CALIFORNIA RESOURCES CORP,Energy,Oil & Gas E&P,NYQ,1.153,1025703,Yes,,Mid
+MAC,MACERICH REIT,Real Estate,REIT - Retail,NYQ,2.215,2035488,Yes,,Mid
+AVTR,AVANTOR INC,Healthcare,Medical Instruments & Supplies,NYQ,0.997,11728873,No,,Mid
+BC,BRUNSWICK CORP,Consumer Cyclical,Recreational Vehicles,NYQ,1.376,1049378,Yes,,Mid
+MHK,MOHAWK INDUSTRIES INC,Consumer Cyclical,"Furnishings, Fixtures & Appliances",NYQ,1.173,944321,No,,Mid
+ENPH,ENPHASE ENERGY INC,Technology,Solar,NGM,1.374,6775431,No,,Mid
+ETSY,ETSY INC,Consumer Cyclical,Internet Retail,NYQ,1.785,3636663,No,,Mid
+FND,FLOOR DECOR HOLDINGS INC CLASS A,Consumer Cyclical,Home Improvement Retail,NYQ,1.742,2656398,No,,Mid
+VSEC,VSE CORP,Industrials,Aerospace & Defense,NMS,1.354,701529,Yes,,Mid
+KBR,KBR INC,Industrials,Engineering & Construction,NYQ,0.444,1434467,Yes,,Mid
+PIPR,PIPER SANDLER COMPANIES,Financial Services,Capital Markets,NYQ,1.538,723516,Yes,,Mid
+PTCT,PTC THERAPEUTICS INC,Healthcare,Biotechnology,NMS,0.564,1258349,No,,Mid
+QBTS,D WAVE QUANTUM INC,Technology,Computer Hardware,NYQ,1.657,28729227,No,,Mid
+GLNG,GOLAR LNG LTD,Energy,Oil & Gas Midstream,NMS,0.205,2018886,Yes,,Mid
+COGT,COGENT BIOSCIENCES INC,Healthcare,Biotechnology,NMS,0.454,2193945,No,,Mid
+GNTX,GENTEX CORP,Consumer Cyclical,Auto Parts,NMS,0.76,2338996,Yes,,Mid
+AVT,AVNET INC,Technology,Electronics & Computer Distribution,NMS,0.911,1141542,Yes,,Mid
+LYFT,LYFT INC CLASS A,Technology,Software - Application,NMS,1.906,17609732,No,,Mid
+OZK,BANK OZK,Financial Services,Banks - Regional,NMS,0.94,1419336,Yes,,Mid
+GVA,GRANITE CONSTRUCTION INC,Industrials,Engineering & Construction,NYQ,1.281,654049,Yes,,Mid
+KRG,KITE REALTY GROUP TRUST REIT,Real Estate,REIT - Retail,NYQ,0.871,1901972,Yes,,Mid
+TGTX,TG THERAPEUTICS INC,Healthcare,Biotechnology,NCM,1.86,2127336,No,,Mid
+AS,AMER SPORTS INC,Consumer Cyclical,Leisure,NYQ,2.796,4907009,No,,Large
+TPG,TPG INC CLASS A,Financial Services,Asset Management,NMS,1.538,3756437,Yes,,Large
+HCC,WARRIOR MET COAL INC,Basic Materials,Coking Coal,NYQ,0.757,971321,Yes,,Mid
+M,MACYS INC,Consumer Cyclical,Department Stores,NYQ,1.524,7759606,Yes,,Mid
+CNX,CNX RESOURCES CORP,Energy,Oil & Gas E&P,NYQ,0.62,2404727,No,,Mid
+AUR,AURORA INNOVATION INC CLASS A,Technology,Information Technology Services,NMS,2.455,18267870,No,,Mid
+ROAD,CONSTRUCTION PARTNERS INC CLASS A,Industrials,Engineering & Construction,NMS,0.84,559221,No,,Mid
+SAIC,SCIENCE APPLICATIONS INTERNATIONAL,Technology,Information Technology Services,NMS,0.321,686709,Yes,,Mid
+ABCB,AMERIS BANCORP,Financial Services,Banks - Regional,NYQ,0.964,562949,Yes,,Mid
+RLI,RLI CORP,Financial Services,Insurance - Property & Casualty,NYQ,0.452,788950,Yes,,Mid
+XENE,XENON PHARMACEUTICALS INC,Healthcare,Biotechnology,NGM,0.944,1426608,No,,Mid
+RDN,RADIAN GROUP INC,Financial Services,Insurance - Specialty,NYQ,0.765,1455652,Yes,,Mid
+MTN,VAIL RESORTS INC,Consumer Cyclical,Resorts & Casinos,NYQ,0.802,910034,Yes,,Mid
+ATMU,ATMUS FILTRATION TECHNOLOGIES INC,Consumer Cyclical,Auto Parts,NYQ,1.495,777504,Yes,,Mid
+POST,POST HOLDINGS INC,Consumer Defensive,Packaged Foods,NYQ,0.339,851100,No,,Mid
+ANF,ABERCROMBIE AND FITCH CLASS A,Consumer Cyclical,Apparel Retail,NYQ,1.112,1602862,No,,Mid
+MAT,MATTEL INC,Consumer Cyclical,Leisure,NMS,0.729,5320013,No,,Mid
+JOBY,JOBY AVIATION INC CLASS A,Industrials,Airports & Air Services,NYQ,2.659,27496947,No,,Mid
+ESTC,ELASTIC NV,Technology,Software - Application,NYQ,1.043,2153468,No,,Mid
+RAL,RALLIANT CORP,Technology,Electronic Components,NYQ,,1842252,Yes,,Mid
+KYMR,KYMERA THERAPEUTICS INC,Healthcare,Biotechnology,NGM,2.297,770631,No,,Mid
+FSLY,FASTLY INC CLASS A,Technology,Software - Application,NMS,0.919,11832800,No,,Mid
+SIGI,SELECTIVE INSURANCE GROUP INC,Financial Services,Insurance - Property & Casualty,NMS,0.209,574695,Yes,,Mid
+PCTY,PAYLOCITY HOLDING CORP,Technology,Software - Application,NMS,0.602,844840,No,,Mid
+KNF,KNIFE RIVER CORP,Basic Materials,Building Materials,NYQ,0.447,661522,No,,Mid
+BIPC,BROOKFIELD INFRASTRUCTURE CORP CLA,Utilities,Utilities - Regulated Gas,NYQ,1.311,910118,Yes,,Mid
+FBIN,FORTUNE BRANDS INNOVATIONS INC,Industrials,Building Products & Equipment,NYQ,1.468,2900860,Yes,,Mid
+PECO,PHILLIPS EDISON AND COMPANY INC,Real Estate,REIT - Retail,NMS,0.564,909795,Yes,,Mid
+LAUR,LAUREATE EDUCATION INC,Consumer Defensive,Education & Training Services,NMS,0.67,1649096,No,,Mid
+BYD,BOYD GAMING CORP,Consumer Cyclical,Resorts & Casinos,NYQ,1.22,935286,Yes,,Mid
+COMP,COMPASS INC CLASS A,Real Estate,Real Estate Services,NYQ,2.573,21327408,No,,Mid
+CROX,CROCS INC,Consumer Cyclical,Footwear & Accessories,NMS,1.539,1282706,No,,Mid
+SLM,SLM CORP,Financial Services,Credit Services,NMS,1.164,3865000,Yes,,Mid
+EXLS,EXLSERVICE HOLDINGS INC,Technology,Information Technology Services,NMS,0.905,2130518,No,,Mid
+CLF,CLEVELAND CLIFFS INC,Basic Materials,Steel,NYQ,1.868,18920155,No,,Mid
+TERN,TERNS PHARMACEUTICALS INC,Healthcare,Biotechnology,NMS,-0.288,4305700,No,,Mid
+SBRA,SABRA HEALTH CARE REIT INC,Real Estate,REIT - Healthcare Facilities,NMS,0.636,2756506,Yes,,Mid
+PRMB,PRIMO BRANDS CLASS A CORP,Consumer Defensive,Beverages - Non-Alcoholic,NYQ,0.555,6069821,Yes,,Mid
+ALK,ALASKA AIR GROUP INC,Industrials,Airlines,NYQ,1.16,4259434,No,,Mid
+LPX,LOUISIANA PACIFIC CORP,Industrials,Building Products & Equipment,NYQ,1.748,1090326,Yes,,Mid
+CRSP,CRISPR THERAPEUTICS AG,Healthcare,Biotechnology,NGM,1.738,1943201,No,,Mid
+HUT,HUT CORP,Financial Services,Capital Markets,NMS,6.171,4910022,No,,Mid
+BFAM,BRIGHT HORIZONS FAMILY SOLUTIONS I,Consumer Cyclical,Personal Services,NYQ,1.412,947834,No,,Mid
+RYTM,RHYTHM PHARMACEUTICALS INC,Healthcare,Biotechnology,NGM,2.149,841757,No,,Mid
+MTH,MERITAGE CORP,Consumer Cyclical,Residential Construction,NYQ,1.452,1048062,Yes,,Mid
+TDS,TELEPHONE AND DATA SYSTEMS INC,Communication Services,Telecom Services,NYQ,0.278,979021,Yes,,Mid
+VNO,VORNADO REALTY TRUST REIT,Real Estate,REIT - Office,NYQ,1.532,2140329,Yes,,Mid
+TEM,TEMPUS AI INC CLASS A,Healthcare,Health Information Services,NMS,,5449447,No,,Mid
+ACLX,ARCELLX INC,Healthcare,Biotechnology,NMS,0.227,2246680,No,,Mid
+EBC,EASTERN BANKSHARES INC,Financial Services,Banks - Regional,NMS,0.787,2096711,Yes,,Mid
+MIR,MIRION TECHNOLOGIES INC CLASS A,Industrials,Specialty Industrial Machinery,NYQ,1.043,3394395,No,,Mid
+HASI,HA SUSTAINABLE INFRASTRUCTURE CAPI,Financial Services,Asset Management,NYQ,1.464,1016093,Yes,,Mid
+PATH,UIPATH INC CLASS A,Technology,Software - Infrastructure,NYQ,1.09,32728960,No,,Mid
+SIRI,SIRIUSXM HOLDINGS INC,Communication Services,Entertainment,NMS,0.923,4764527,Yes,,Mid
+BBWI,BATH AND BODY WORKS INC,Consumer Cyclical,Specialty Retail,NYQ,1.418,5467460,Yes,,Mid
+BOOT,BOOT BARN HOLDINGS INC,Consumer Cyclical,Apparel Retail,NYQ,1.676,676596,No,,Mid
+TNL,TRAVEL LEISURE,Consumer Cyclical,Travel Services,NYQ,1.352,637304,Yes,,Mid
+MRP,MILLROSE PROPERTIES INC CLASS A,Real Estate,REIT - Residential,NYQ,,1408824,Yes,,Mid
+OPCH,OPTION CARE HEALTH INC,Healthcare,Medical Care Facilities,NMS,0.883,1881565,No,,Mid
+DAN,DANA INCORPORATED INC,Consumer Cyclical,Auto Parts,NYQ,2.086,1628144,Yes,,Mid
+HRB,H&R BLOCK INC,Consumer Cyclical,Personal Services,NYQ,0.356,2494785,Yes,,Mid
+VVV,VALVOLINE INC,Consumer Cyclical,Auto & Truck Dealerships,NYQ,1.167,1990793,No,,Mid
+FOLD,AMICUS THERAPEUTICS INC,Healthcare,Biotechnology,NGM,0.492,6325047,No,,Mid
+LBRT,LIBERTY ENERGY INC CLASS A,Energy,Oil & Gas Equipment & Services,NYQ,0.505,4831072,Yes,,Mid
+DBX,DROPBOX INC CLASS A,Technology,Software - Infrastructure,NMS,0.586,4044618,No,,Mid
+RIOT,RIOT PLATFORMS INC,Financial Services,Capital Markets,NCM,3.549,18960259,No,,Mid
+RGTI,RIGETTI COMPUTING INC,Technology,Computer Hardware,NCM,1.723,29581737,No,,Mid
+S,SENTINELONE INC CLASS A,Technology,Software - Infrastructure,NYQ,0.777,8516652,No,,Mid
+CPB,CAMPBELL SOUP,Consumer Defensive,Packaged Foods,NMS,-0.064,8664011,Yes,,Mid
+WULF,TERAWULF INC,Financial Services,Capital Markets,NCM,4.303,31063134,No,,Mid
+CNO,CNO FINANCIAL GROUP INC,Financial Services,Insurance - Life,NYQ,0.853,657985,Yes,,Mid
+WING,WINGSTOP INC,Consumer Cyclical,Restaurants,NMS,1.861,961545,Yes,,Mid
+OLED,UNIVERSAL DISPLAY CORP,Technology,Electronic Components,NMS,1.634,774495,Yes,,Mid
+MSM,MSC INDUSTRIAL INC CLASS A,Industrials,Industrial Distribution,NYQ,0.775,739200,Yes,,Mid
+MWA,MUELLER WATER PRODUCTS INC SERIES,Industrials,Specialty Industrial Machinery,NYQ,1.141,1144459,Yes,,Mid
+ACIW,ACI WORLDWIDE INC,Technology,Software - Infrastructure,NMS,1.084,838532,No,,Mid
+REZI,RESIDEO TECHNOLOGIES INC,Industrials,Industrial Distribution,NYQ,1.682,1332475,No,,Mid
+KRMN,KARMAN HOLDINGS INC,Industrials,Aerospace & Defense,NYQ,,2189977,No,,Large
+ASB,ASSOCIATED BANCORP,Financial Services,Banks - Regional,NYQ,0.791,2501559,Yes,,Mid
+VISN,VISTANCE NETWORKS INC,Technology,Communication Equipment,NMS,2.458,4291660,No,,Mid
+SKY,CHAMPION HOMES INC,Consumer Cyclical,Residential Construction,NYQ,1.03,740001,No,,Mid
+PVH,PVH CORP,Consumer Cyclical,Apparel Manufacturing,NYQ,1.609,1040311,Yes,,Mid
+NVST,ENVISTA HOLDINGS CORP,Healthcare,Medical Instruments & Supplies,NYQ,0.948,2940540,No,,Mid
+CORZ,CORE SCIENTIFIC INC,Technology,Software - Infrastructure,NMS,6.897,11552578,No,,Mid
+AMTM,AMENTUM HOLDINGS INC,Industrials,Specialty Business Services,NYQ,,2135072,No,,Mid
+FTDR,FRONTDOOR INC,Consumer Cyclical,Personal Services,NMS,1.325,650427,No,,Mid
+HIMS,HIMS HERS HEALTH INC CLASS A,Healthcare,Drug Manufacturers - Specialty & Generic,NYQ,2.608,34449619,No,,Mid
+MDU,MDU RESOURCES GROUP INC,Utilities,Utilities - Regulated Gas,NYQ,0.387,1977421,Yes,,Mid
+ALGM,ALLEGRO MICROSYSTEMS INC,Technology,Semiconductors,NMS,1.67,2532957,No,,Mid
+PTEN,PATTERSON UTI ENERGY INC,Energy,Oil & Gas Drilling,NMS,0.732,11318577,Yes,,Mid
+TDW,TIDEWATER INC,Energy,Oil & Gas Equipment & Services,NYQ,0.586,844373,No,,Mid
+CIFR,CIPHER DIGITAL INC,Technology,Information Technology Services,NMS,3.007,29031680,No,,Mid
+SRRK,SCHOLAR ROCK HOLDING CORP,Healthcare,Biotechnology,NMS,0.746,1324360,No,,Mid
+YOU,CLEAR SECURE INC CLASS A,Technology,Software - Application,NYQ,1.103,1788922,Yes,,Mid
+FLG,FLAGSTAR BANK NATIONAL ASSOCIATION,Financial Services,Banks - Regional,NYQ,1.082,5515398,Yes,,Mid
+CGON,CG ONCOLOGY INC,Healthcare,Biotechnology,NMS,1.191,1334232,No,,Mid
+ITRI,ITRON INC,Technology,Scientific & Technical Instruments,NMS,1.521,994034,No,,Mid
+PEGA,PEGASYSTEMS INC,Technology,Software - Application,NMS,1.116,2266409,Yes,,Mid
+APLS,APELLIS PHARMACEUTICALS INC,Healthcare,Biotechnology,NMS,0.29,4718167,No,,Mid
+MORN,MORNINGSTAR INC,Financial Services,Financial Data & Stock Exchanges,NMS,1.108,577503,Yes,,Mid
+CELC,CELCUITY INC,Healthcare,Biotechnology,NCM,0.41,730877,No,,Mid
+MMSI,MERIT MEDICAL SYSTEMS INC,Healthcare,Medical Instruments & Supplies,NMS,0.604,808345,No,,Mid
+STNE,STONECO LTD CLASS A,Technology,Software - Infrastructure,NMS,1.877,5501919,No,,Mid
+URBN,URBAN OUTFITTERS INC,Consumer Cyclical,Apparel Retail,NMS,1.213,1762247,No,,Mid
+BRKR,BRUKER CORP,Healthcare,Medical Devices,NMS,1.188,2452859,Yes,,Mid
+WLK,WESTLAKE CORP,Basic Materials,Specialty Chemicals,NYQ,0.828,1410839,Yes,,Large
+CORT,CORCEPT THERAPEUTICS INC,Healthcare,Biotechnology,NCM,0.312,2113921,No,,Mid
+IRTC,IRHYTHM HOLDINGS INC,Healthcare,Medical Devices,NMS,1.149,703654,No,,Mid
+AIR,AAR CORP,Industrials,Aerospace & Defense,NYQ,1.199,553552,No,,Mid
+TPC,TUTOR PERINI CORP,Industrials,Engineering & Construction,NYQ,2.178,645547,Yes,,Mid
+TREX,TREX INC,Industrials,Building Products & Equipment,NYQ,1.6,2021696,No,,Mid
+EPR,EPR PROPERTIES REIT,Real Estate,REIT - Specialty,NYQ,0.957,903800,Yes,,Mid
+THO,THOR INDUSTRIES INC,Consumer Cyclical,Recreational Vehicles,NYQ,1.401,694198,Yes,,Mid
+OUT,OUTFRONT MEDIA INC,Real Estate,REIT - Specialty,NYQ,1.491,1438186,Yes,,Mid
+NWE,NORTHWESTERN ENERGY GROUP INC,Utilities,Utilities - Regulated Electric,NMS,0.315,587908,Yes,,Mid
+LAZ,LAZARD INC,Financial Services,Capital Markets,NYQ,1.369,1332227,Yes,,Mid
+SIG,SIGNET JEWELERS LTD,Consumer Cyclical,Luxury Goods,NYQ,1.218,971675,Yes,,Mid
+TPH,TRI POINTE HOMES INC,Consumer Cyclical,Residential Construction,NYQ,1.335,2673393,No,,Mid
+FFIN,FIRST FINANCIAL BANKSHARES INC,Financial Services,Banks - Regional,NMS,0.837,843163,Yes,,Mid

@@ -1,0 +1,34 @@
+spy_avg_zscore
+vxx_avg_zscore
+uso_avg_zscore
+uup_avg_zscore
+ief_avg_zscore
+rsi_start_scaled
+rsi_end_scaled
+hour_scaled
+day_scaled
+swing_return_scaled
+slope_pct_per_hour_scaled
+residual_volatility_pct_scaled
+avg_hourly_volume_scaled
+beta_scaled
+sector_Basic Materials
+sector_Communication Services
+sector_Consumer Cyclical
+sector_Consumer Defensive
+sector_Consumer Discretionary
+sector_Consumer Staples
+sector_Energy
+sector_Financial Services
+sector_Financials
+sector_Health Care
+sector_Healthcare
+sector_Industrials
+sector_Information Technology
+sector_Materials
+sector_Real Estate
+sector_Technology
+sector_Utilities
+mcap_Large
+mcap_Mid
+mcap_Small

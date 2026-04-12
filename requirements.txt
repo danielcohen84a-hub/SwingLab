@@ -1,0 +1,13 @@
+pandas
+requests
+pyyaml
+lxml
+yfinance
+tensorflow
+keras
+scikit-learn
+matplotlib
+joblib
+numpy
+scipy
+seaborn

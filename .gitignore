@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+
+# Project Specific
+Data/*.sqlite
+Data/*.npy
+models/*.h5
+config.yaml
+outputs/
+logs/
+
+# Optional: Keep the directory structure but ignore content
+# !Data/.gitkeep
+# !models/.gitkeep

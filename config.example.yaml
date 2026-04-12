@@ -1,0 +1,48 @@
+# API and General Settings
+api:
+  polygon_key: "YOUR_POLYGON_API_KEY_HERE"
+
+# Database Settings
+database:
+  path: "Data/SwingLabDB.sqlite"
+
+# Historical Data Context
+historical_indicator_run:
+  years_back: 4
+  timeframe: "hour"
+  multiplier: 1
+  requests_per_minute: 5
+
+historical_stock_run:
+  years_back: 2
+  timeframe: "hour"
+  multiplier: 1
+  requests_per_minute: 4
+
+# Live Mode 
+live_inference:
+  weeks_back: 8
+  timeframe: "hour"
+  multiplier: 1
+  requests_per_minute: 5
+
+# Custom Macro Windows
+indicator_windows_months:
+  spy: 8
+  vxx: 3
+  uso: 6
+  uup: 18
+  ief: 24
+
+# Data Processing Settings
+processing:
+  extrema_order: 7
+  sequence_length: 8
+
+# LSTM Model Hyperparameters
+model:
+  learning_rate: 0.0044
+  batch_size: 256
+  epochs: 50
+  dropout_rate: 0.32
+  hidden_units: 96
