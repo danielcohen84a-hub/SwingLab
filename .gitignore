@@ -13,11 +13,21 @@ Thumbs.db
 
 # Project Specific
 Data/*.sqlite
+Data/*.sqlite-shm
+Data/*.sqlite-wal
 Data/*.npy
+Data/*.parquet
+Data/*.pkl
 models/*.h5
+models/*.keras
 config.yaml
+.env
 outputs/
 logs/
+scratch/
+archive/
+audits/
+test*.py
 
 # Optional: Keep the directory structure but ignore content
 # !Data/.gitkeep

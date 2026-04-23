@@ -106,7 +106,9 @@ class DataDownloader:
         
         end_date = datetime.now()
         if start_date is None:
+            years_back = years_back or 4  # Guard against None
             start_date = end_date - timedelta(days=365 * years_back)
+
 
         INDICATORS = {
             "SPY": "spy_close",   "VXX": "vxx_close", 

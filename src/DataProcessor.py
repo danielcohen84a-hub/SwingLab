@@ -58,6 +58,11 @@ class SwingProcessor:
           - Any absolute price level
 
         Returns a DataFrame where each row is one swing segment.
+
+        NOTE ON DURATION:
+        'duration_hours' is calculated as (idx1 - idx0). This is the number of 
+        hourly candles (bars) between extrema, NOT the wall-clock elapsed time. 
+        The model predicts this candle count directly.
         """
         df = df.copy()
         df = self._add_rsi(df)

@@ -65,9 +65,26 @@ class PlotlyOracle:
         # Calculate Target Price from Predicted Return
         target_price = last_price * (1 + prediction_return)
         
-        # Use explicitly predicted duration from Model 2
-        target_time = last_time + timedelta(hours=float(prediction_duration_hours))
-        dur_msg = f" (in {prediction_duration_hours:.1f}h)"
+        # --- CANDLE-BASED TARGET TIME PROJECTION ---
+        # Find index of last candle and project N candles forward
+        target_time = None
+        try:
+            # Find the actual index of the anchor in the historic data we have
+            anchor_idx = ticker_df['Datetime'].searchsorted(last_time)
+            target_idx = anchor_idx + int(prediction_duration_hours)
+            
+            if target_idx < len(ticker_df):
+                target_time = ticker_df.iloc[target_idx]['Datetime']
+            else:
+                # Estimate future time using 7 trading hours per day
+                bars_into_future = target_idx - (len(ticker_df) - 1)
+                days_away = bars_into_future / 7.0
+                target_time = ticker_df.iloc[-1]['Datetime'] + timedelta(days=days_away)
+        except:
+            # Fallback
+            target_time = last_time + timedelta(hours=float(prediction_duration_hours))
+
+        dur_msg = f" (in {prediction_duration_hours:.1f} bars)"
 
         # Draw the 'Neon Future' dotted line
         pred_color = 'lime' if prediction_return > 0 else 'red'

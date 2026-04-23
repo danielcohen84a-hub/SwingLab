@@ -121,31 +121,52 @@ class DBManager:
                 )
             ''')
             
-            # 6. basic_model_tests Table
-            # Migrating to tracking execution delay logic + Hit Early check
-            db_cols = [row[1] for row in cursor.execute('PRAGMA table_info(basic_model_tests)').fetchall()]
-            if db_cols and 'was_target_hit_early' not in db_cols:
-                print("MIGRATION: Dropping old basic_model_tests table to add hit_early schemas...")
-                cursor.execute('DROP TABLE basic_model_tests')
+            # (Removed basic_model_tests table creation)
 
+            # 6. predictions Table
+            # One row per live prediction issued by the daily runner.
             cursor.execute('''
-                CREATE TABLE IF NOT EXISTS basic_model_tests (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    symbol TEXT,
-                    base_t_end DATETIME,
-                    predicted_return REAL,
-                    predicted_duration REAL,
-                    actual_return REAL,
-                    actual_duration REAL,
-                    delayed_entry_price REAL,
-                    delayed_actual_exit_price REAL,
-                    delayed_predicted_exit_price REAL,
-                    was_target_hit_early INTEGER,
-                    status TEXT,
-                    UNIQUE(symbol, base_t_end)
+                CREATE TABLE IF NOT EXISTS predictions (
+                    prediction_id          INTEGER PRIMARY KEY AUTOINCREMENT,
+                    ticker                 TEXT    NOT NULL,
+                    -- When the script actually ran and made this prediction (real clock time)
+                    predicted_at           DATETIME NOT NULL,
+                    -- The confirmed extremum that ends the context window (= t_end of last segment)
+                    entry_extremum_time    DATETIME NOT NULL,
+                    -- First trading bar AFTER entry_extremum_time: trade entry time
+                    segment_start_time     DATETIME NOT NULL,
+                    -- Open price of the segment_start_time bar: realistic entry price
+                    price_at_prediction    REAL    NOT NULL,
+                    predicted_return       REAL    NOT NULL,
+                    predicted_duration_bars INTEGER NOT NULL,
+                    price_target           REAL    NOT NULL,
+                    -- 1 = first-run back-prediction (bootstrap), 0 = live daily prediction
+                    is_bootstrap           INTEGER DEFAULT 0
                 )
             ''')
-            
+
+            # 7. prediction_results Table
+            # One row per graded prediction; joined to predictions via prediction_id.
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS prediction_results (
+                    result_id             INTEGER PRIMARY KEY AUTOINCREMENT,
+                    prediction_id         INTEGER NOT NULL,
+                    ticker                TEXT    NOT NULL,
+                    actual_return         REAL    NOT NULL,
+                    actual_duration_bars  INTEGER NOT NULL,
+                    -- 1 if sign(actual_return) == sign(predicted_return)
+                    direction_correct     INTEGER NOT NULL,
+                    -- predicted_return - actual_return
+                    return_error          REAL    NOT NULL,
+                    -- predicted_duration_bars - actual_duration_bars
+                    duration_error        INTEGER NOT NULL,
+                    -- 1 if max(high) >= price_target (bull) or min(low) <= price_target (bear)
+                    target_was_hit        INTEGER NOT NULL,
+                    graded_at             DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (prediction_id) REFERENCES predictions(prediction_id)
+                )
+            ''')
+
             conn.commit()
 
     def upsert_stock_metadata(self, symbol, company_name=None, sector=None, industry=None, exchange=None, 
@@ -354,41 +375,110 @@ class DBManager:
             df = pd.read_sql_query('SELECT symbol FROM stocks_meta_data ORDER BY symbol', conn)
         return df['symbol'].tolist()
 
-    def upsert_basic_model_test(self, symbol, base_t_end, predicted_return, predicted_duration, 
-                                actual_return=None, actual_duration=None, 
-                                delayed_entry_price=None, delayed_actual_exit_price=None, delayed_predicted_exit_price=None,
-                                was_target_hit_early=0, status='PENDING'):
-        """Inserts a new prediction or updates an existing one when graded."""
+    # ─────────────────────────────────────────────────────────────────
+    # Predictions & Results
+    # ─────────────────────────────────────────────────────────────────
+
+    def insert_prediction(self, ticker, predicted_at, entry_extremum_time, segment_start_time,
+                          price_at_prediction, predicted_return, predicted_duration_bars,
+                          price_target, is_bootstrap=0):
+        """
+        Inserts a new prediction row and returns the auto-generated prediction_id.
+        """
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                INSERT INTO predictions
+                    (ticker, predicted_at, entry_extremum_time, segment_start_time,
+                     price_at_prediction, predicted_return, predicted_duration_bars,
+                     price_target, is_bootstrap)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                ticker,
+                str(predicted_at),
+                str(entry_extremum_time),
+                str(segment_start_time),
+                float(price_at_prediction),
+                float(predicted_return),
+                int(predicted_duration_bars),
+                float(price_target),
+                int(is_bootstrap),
+            ))
+            conn.commit()
+            return cursor.lastrowid
+
+    def insert_prediction_result(self, prediction_id, ticker, actual_return, actual_duration_bars,
+                                 direction_correct, return_error, duration_error, target_was_hit):
+        """Inserts a graded result row for a completed prediction."""
         with self._get_connection() as conn:
             conn.execute('''
-                INSERT INTO basic_model_tests (
-                    symbol, base_t_end, predicted_return, predicted_duration, actual_return, actual_duration, 
-                    delayed_entry_price, delayed_actual_exit_price, delayed_predicted_exit_price, was_target_hit_early, status
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(symbol, base_t_end) DO UPDATE SET
-                    actual_return=excluded.actual_return,
-                    actual_duration=excluded.actual_duration,
-                    delayed_entry_price=excluded.delayed_entry_price,
-                    delayed_actual_exit_price=excluded.delayed_actual_exit_price,
-                    delayed_predicted_exit_price=excluded.delayed_predicted_exit_price,
-                    was_target_hit_early=excluded.was_target_hit_early,
-                    status=excluded.status
-            ''', (str(symbol), str(base_t_end), float(predicted_return), float(predicted_duration), 
-                  float(actual_return) if actual_return is not None else None, 
-                  float(actual_duration) if actual_duration is not None else None, 
-                  float(delayed_entry_price) if delayed_entry_price is not None else None,
-                  float(delayed_actual_exit_price) if delayed_actual_exit_price is not None else None,
-                  float(delayed_predicted_exit_price) if delayed_predicted_exit_price is not None else None,
-                  int(was_target_hit_early),
-                  str(status)))
+                INSERT INTO prediction_results
+                    (prediction_id, ticker, actual_return, actual_duration_bars,
+                     direction_correct, return_error, duration_error, target_was_hit)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                int(prediction_id),
+                ticker,
+                float(actual_return),
+                int(actual_duration_bars),
+                int(direction_correct),
+                float(return_error),
+                int(duration_error),
+                int(target_was_hit),
+            ))
             conn.commit()
 
-    def get_basic_model_tests(self, symbol=None):
-        """Fetches all past predictions/grades."""
-        query = 'SELECT * FROM basic_model_tests'
-        params = []
-        if symbol:
-            query += ' WHERE symbol = ?'
-            params.append(symbol)
+    def get_open_predictions(self):
+        """Returns all predictions that have not yet been graded (no matching result row)."""
         with self._get_connection() as conn:
-            return pd.read_sql_query(query, conn, params=params, parse_dates=['base_t_end'])
+            return pd.read_sql_query('''
+                SELECT * FROM predictions
+                WHERE prediction_id NOT IN (SELECT prediction_id FROM prediction_results)
+                ORDER BY predicted_at ASC
+            ''', conn)
+
+    def get_tracked_tickers(self):
+        """Returns the distinct list of tickers currently being tracked (from predictions table)."""
+        with self._get_connection() as conn:
+            df = pd.read_sql_query('SELECT DISTINCT ticker FROM predictions ORDER BY ticker', conn)
+        return df['ticker'].tolist()
+
+    def get_open_prediction_tickers(self):
+        """Returns tickers that currently have at least one ungraded open prediction."""
+        with self._get_connection() as conn:
+            df = pd.read_sql_query('''
+                SELECT DISTINCT ticker FROM predictions
+                WHERE prediction_id NOT IN (SELECT prediction_id FROM prediction_results)
+            ''', conn)
+        return df['ticker'].tolist()
+
+    def is_predictions_empty(self):
+        """Returns True if no predictions have been issued yet (signals first-run bootstrap)."""
+        with self._get_connection() as conn:
+            count = conn.execute('SELECT COUNT(*) FROM predictions').fetchone()[0]
+        return count == 0
+
+    def get_latest_prediction_for_ticker(self, ticker):
+        """
+        Returns the most recently issued prediction for a ticker as a dict.
+        Returns None if the ticker has no predictions.
+        """
+        with self._get_connection() as conn:
+            df = pd.read_sql_query('''
+                SELECT * FROM predictions WHERE ticker = ?
+                ORDER BY predicted_at DESC LIMIT 1
+            ''', conn, params=[ticker])
+        if df.empty:
+            return None
+        return df.iloc[0].to_dict()
+
+    def get_prediction_by_id(self, prediction_id):
+        """Returns a single prediction row as a dict, or None if not found."""
+        with self._get_connection() as conn:
+            df = pd.read_sql_query(
+                'SELECT * FROM predictions WHERE prediction_id = ?',
+                conn, params=[int(prediction_id)]
+            )
+        if df.empty:
+            return None
+        return df.iloc[0].to_dict()

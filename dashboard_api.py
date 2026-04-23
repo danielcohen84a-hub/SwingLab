@@ -1,133 +1,183 @@
-import os
-import sqlite3
-import pandas as pd
-import numpy as np
-from flask import Flask, jsonify, send_from_directory
-from flask_cors import CORS
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 import yaml
+import pandas as pd
+from datetime import timedelta
+from typing import Dict, Any
 
-app = Flask(__name__, static_folder='dashboard', static_url_path='')
-CORS(app)
+from src.DBManager import DBManager
 
-# Load configuration for DB Path
-with open('config.yaml', 'r') as f:
-    config = yaml.safe_load(f)
-DB_PATH = config['database']['path']
+app = FastAPI(title="SwingLab Dashboard API")
 
-def get_db_connection():
-    conn = sqlite3.connect(DB_PATH, timeout=15.0)
-    conn.execute("PRAGMA journal_mode=WAL;")
-    conn.row_factory = sqlite3.Row
-    return conn
+# Allow Vite frontend to connect
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Restrict in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-@app.route('/')
-def serve_index():
-    return send_from_directory('dashboard', 'index.html')
+def get_db_manager() -> DBManager:
+    with open('config.yaml', 'r') as f:
+        config = yaml.safe_load(f)
+    return DBManager(config['database']['path'])
 
-@app.route('/<path:path>')
-def serve_static(path):
-    return send_from_directory('dashboard', path)
+@app.get("/api/predictions")
+def get_predictions() -> Dict[str, Any]:
+    """Returns a joined table of predictions, their results, and metadata."""
+    db = get_db_manager()
+    with db._get_connection() as conn:
+        # Join predictions with their results (LEFT JOIN since open predictions have no results yet)
+        # Also join stocks_meta_data to get the sector for filtering
+        query = '''
+            SELECT 
+                p.prediction_id,
+                p.ticker,
+                m.sector,
+                p.predicted_at,
+                p.segment_start_time,
+                p.price_at_prediction,
+                p.predicted_return,
+                p.predicted_duration_bars,
+                p.price_target,
+                p.is_bootstrap,
+                r.actual_return,
+                r.actual_duration_bars,
+                r.direction_correct,
+                r.return_error,
+                r.target_was_hit,
+                r.graded_at
+            FROM predictions p
+            LEFT JOIN prediction_results r ON p.prediction_id = r.prediction_id
+            LEFT JOIN stocks_meta_data m ON p.ticker = m.symbol
+            ORDER BY p.predicted_at DESC
+        '''
+        df = pd.read_sql_query(query, conn)
+    
+    # Handle NaNs from LEFT JOIN so JSON serialization works
+    df = df.fillna("")
+    
+    # Return as list of dictionaries
+    return {"data": df.to_dict(orient="records")}
 
-@app.route('/api/stats', methods=['GET'])
-def get_stats():
-    conn = get_db_connection()
-    df = pd.read_sql_query("SELECT * FROM basic_model_tests", conn)
-    conn.close()
-
+@app.get("/api/summary")
+def get_summary() -> Dict[str, Any]:
+    """Returns top-level metrics for the dashboard (Win Rate)."""
+    db = get_db_manager()
+    with db._get_connection() as conn:
+        df = pd.read_sql_query('SELECT direction_correct FROM prediction_results', conn)
+    
     if df.empty:
-        return jsonify({"error": "No data available"}), 404
-
-    graded = df[df['status'] == 'GRADED']
-    pending_count = len(df[df['status'] == 'PENDING'])
-
-    if graded.empty:
-        return jsonify({"message": "No graded predictions yet", "pending_count": pending_count}), 200
-
-    correct_dir = np.sum(np.sign(graded['predicted_return']) == np.sign(graded['actual_return']))
-    win_rate = int(correct_dir) / len(graded)
-    mae_ret = np.mean(np.abs(graded['predicted_return'] - graded['actual_return']))
-
-    winners = graded[np.sign(graded['predicted_return']) == np.sign(graded['actual_return'])]
-    losers = graded[np.sign(graded['predicted_return']) != np.sign(graded['actual_return'])]
-
-    avg_win = winners['actual_return'].mean() if not winners.empty else 0.0
-    avg_loss = losers['actual_return'].mean() if not losers.empty else 0.0
-
-    long_trades = graded[graded['predicted_return'] > 0]
-    short_trades = graded[graded['predicted_return'] < 0]
+        return {"win_rate": 0.0}
+        
+    wins = (df['direction_correct'] == 1).sum()
+    win_rate = float(wins / len(df))
     
-    theoretical_profit_long = long_trades['actual_return'].sum() * 100 if not long_trades.empty else 0
-    theoretical_profit_short = (short_trades['actual_return'] * -1).sum() * 100 if not short_trades.empty else 0
+    return {"win_rate": win_rate}
 
-    # For chart mapping: Cumulative profit over time
-    graded = graded.sort_values(by='base_t_end')
-    chart_data = []
-    
-    cum_ideal_long = 0
-    cum_ideal_short = 0
-    cum_execution = 0 # Combined realistic lagged P&L
-    
-    for _, row in graded.iterrows():
-        # Ideal Oracle Streams
-        if row['predicted_return'] > 0:
-            cum_ideal_long += float(row['actual_return']) * 100
-        elif row['predicted_return'] < 0:
-            # Profit on short is -1 * actual return
-            cum_ideal_short += float(row['actual_return']) * -100
-            
-        # Execution Stream (Combined realistically if not skipped)
-        if pd.notnull(row['delayed_entry_price']) and pd.notnull(row['delayed_actual_exit_price']):
-            # If target hit early, profit is 0 (skipped)
-            if row.get('was_target_hit_early', 0) == 1:
-                pass 
-            else:
-                # Calculate return based on direction
-                if row['predicted_return'] > 0: # Long
-                    trade_ret = (row['delayed_actual_exit_price'] - row['delayed_entry_price']) / row['delayed_entry_price']
-                else: # Short
-                    trade_ret = (row['delayed_entry_price'] - row['delayed_actual_exit_price']) / row['delayed_entry_price']
-                cum_execution += float(trade_ret) * 100
-                
-        chart_data.append({
-            'date': str(row['base_t_end']),
-            'cum_long': cum_ideal_long,
-            'cum_short': cum_ideal_short,
-            'cum_execution': cum_execution
-        })
+@app.get("/api/chart/{prediction_id}")
+def get_chart_data(prediction_id: int) -> Dict[str, Any]:
+    """
+    Returns all data needed to render a PlotlyOracle-style chart for a single prediction:
+      - candles: windowed OHLCV around the entry time
+      - zigzag: swing segment zig-zag points
+      - prediction: the raw prediction fields (entry price, return, duration, target)
+    """
+    db = get_db_manager()
 
-    # Timing Accuracy: How many predictions had a duration error < 50% of the prediction?
-    duration_errors = np.abs(graded['predicted_duration'] - graded['actual_duration'])
-    time_accurate = np.sum(duration_errors < (graded['predicted_duration'] * 0.5))
-    time_acc_rate = int(time_accurate) / len(graded) if len(graded) > 0 else 0
+    # 1. Fetch the prediction row
+    pred = db.get_prediction_by_id(prediction_id)
+    if pred is None:
+        raise HTTPException(status_code=404, detail="Prediction not found")
 
-    stats = {
-        "total_graded": len(graded),
-        "win_rate": float(win_rate),
-        "time_acc": float(time_acc_rate),
-        "mae": float(mae_ret),
-        "avg_win": float(avg_win),
-        "avg_loss": float(avg_loss),
-        "profit_long": float(theoretical_profit_long),
-        "profit_short": float(theoretical_profit_short),
-        "pending_count": pending_count,
-        "chart_data": chart_data
+    ticker = pred['ticker']
+    # Use entry_extremum_time as chart anchor; show 6 weeks before and predicted_duration_bars after
+    try:
+        anchor = pd.to_datetime(pred['entry_extremum_time'])
+    except Exception:
+        anchor = pd.to_datetime(pred['segment_start_time'])
+
+    window_start = anchor - timedelta(weeks=6)
+    window_end   = anchor + timedelta(hours=pred['predicted_duration_bars'] * 1.5 + 100)
+
+    with db._get_connection() as conn:
+        # 2. Fetch windowed OHLCV candles
+        candles_df = pd.read_sql_query(
+            '''SELECT datetime, open, high, low, close, volume
+               FROM raw_stock_data
+               WHERE symbol = ?
+                 AND datetime >= ?
+                 AND datetime <= ?
+               ORDER BY datetime ASC''',
+            conn,
+            params=[ticker, str(window_start), str(window_end)],
+        )
+
+        # 3. Fetch swing segments in the same window
+        segs_df = pd.read_sql_query(
+            '''SELECT t_start, t_end, swing_return
+               FROM segments
+               WHERE symbol = ?
+                 AND t_start >= ?
+                 AND t_end   <= ?
+               ORDER BY t_start ASC''',
+            conn,
+            params=[ticker, str(window_start), str(window_end)],
+        )
+
+    # 4. Build zig-zag price list – we need price_start / price_end.
+    # They aren't stored in segments, but we can reconstruct them from candles.
+    candles_df['datetime'] = pd.to_datetime(candles_df['datetime'])
+    if not candles_df.empty and not segs_df.empty:
+        # Map each segment endpoint to the closest candle close price
+        segs_df['t_start'] = pd.to_datetime(segs_df['t_start'])
+        segs_df['t_end']   = pd.to_datetime(segs_df['t_end'])
+
+        def nearest_close(ts):
+            idx = (candles_df['datetime'] - ts).abs().idxmin()
+            return float(candles_df.loc[idx, 'close'])
+
+        zigzag_points = []
+        for _, seg in segs_df.iterrows():
+            if not zigzag_points:
+                zigzag_points.append({
+                    "t": seg['t_start'].isoformat(),
+                    "price": nearest_close(seg['t_start'])
+                })
+            zigzag_points.append({
+                "t": seg['t_end'].isoformat(),
+                "price": nearest_close(seg['t_end'])
+            })
+    else:
+        zigzag_points = []
+
+    # 5. Serialize candles
+    candles_out = [
+        {
+            "t": row['datetime'].isoformat(),
+            "o": row['open'],
+            "h": row['high'],
+            "l": row['low'],
+            "c": row['close'],
+        }
+        for _, row in candles_df.iterrows()
+    ]
+
+    return {
+        "ticker": ticker,
+        "candles": candles_out,
+        "zigzag": zigzag_points,
+        "prediction": {
+            "entry_time":        str(pred.get('segment_start_time', pred.get('entry_extremum_time'))),
+            "entry_price":       pred['price_at_prediction'],
+            "predicted_return":  pred['predicted_return'],
+            "predicted_duration_bars": pred['predicted_duration_bars'],
+            "price_target":      pred['price_target'],
+        }
     }
-    return jsonify(stats)
 
-@app.route('/api/predictions', methods=['GET'])
-def get_predictions():
-    conn = get_db_connection()
-    df = pd.read_sql_query("SELECT * FROM basic_model_tests ORDER BY base_t_end DESC", conn)
-    conn.close()
-    
-    # Replace NaN with None so JSON serialization works
-    df = df.replace({np.nan: None})
-    return jsonify(df.to_dict(orient='records'))
 
-if __name__ == '__main__':
-    print("\n" + "="*60)
-    print("  SWINGLAB DASHBOARD ENGINE INITIALIZED")
-    print("  -> http://localhost:5000")
-    print("="*60 + "\n")
-    # Turn off reloader so it doesn't double-initialize in terminal
-    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("dashboard_api:app", host="0.0.0.0", port=8000, reload=True)

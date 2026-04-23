@@ -159,8 +159,14 @@ def run_build_dataset(db, config):
     print("STEP 4: Building Training Dataset (Multi-Target)")
     print("─" * 50)
 
+    import glob
+    print("  [Auto-Cleanup] Removing old dataset tensors and tuning caches...")
+    for f in glob.glob("Data/*train*.npy") + glob.glob("Data/tuning_cache*.pkl"):
+        try: os.remove(f)
+        except OSError: pass
+
     proc_settings = config.get('processing', {})
-    seq_len = config.get('model', {}).get('sequence_length', 5)
+    seq_len = config.get('model2', {}).get('sequence_length', 5)
     windows = config.get('indicator_windows_months', None)
     
     builder = DatasetBuilder(db_manager=db)
@@ -182,6 +188,12 @@ def run_train_model(config):
     print("\n" + "-" * 50)
     print("STEP 5: Training Multi-Target LSTM Model")
     print("-" * 50)
+
+    import glob
+    print("  [Auto-Cleanup] Removing previous model weights...")
+    for f in glob.glob("models/*.h5"):
+        try: os.remove(f)
+        except OSError: pass
 
     x_path, y_path = "Data/X_train.npy", "Data/y_train.npy"
     if not os.path.exists(x_path) or not os.path.exists(y_path):
@@ -213,11 +225,11 @@ def run_train_model(config):
     model = SwingLabLSTM(
         sequence_length=sequence_length,
         num_features=num_features,
-        model_config=config.get('model', {})
+        model_config=config.get('model2', {})
     )
     model.model.summary()
 
-    train_cfg = config.get('model', {})
+    train_cfg = config.get('model2', {})
     history = model.train(
         X_train, y_train,
         X_val=X_val, y_val=y_val, 
