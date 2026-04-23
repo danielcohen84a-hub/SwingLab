@@ -22,6 +22,11 @@ Usage:
 
 import os
 import sys
+
+# Ensure the working directory is always the script's location
+# This prevents PermissionError or FileNotFoundError when run via Task Scheduler
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 import yaml
 import time
 import random
@@ -85,7 +90,7 @@ def load_config():
 def setup_scheduler():
     """
     Registers automatic_daily_run.py as a Windows Task Scheduler task.
-    Fires every day at 4:30 PM (30 min after US market close).
+    Fires every day at 11:30 PM (Jerusalem time, after US market close).
     The task will run for up to 2 hours to accommodate 100 stocks at Polygon's rate limit.
     Run once with: python automatic_daily_run.py --setup-scheduler
     """
@@ -94,14 +99,14 @@ def setup_scheduler():
     cmd = (
         f'schtasks /create /tn "SwingLab Daily Close" '
         f'/tr "\\"{python_path}\\" \\"{script_path}\\"" '
-        f'/sc daily /st 16:30 /du 0002:00 /f'
+        f'/sc daily /st 23:30 /du 0002:00 /f'
     )
     print("Registering Windows Task Scheduler task...")
     print(f"Command: {cmd}\n")
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     if result.returncode == 0:
         print("✓ Task registered successfully.")
-        print("  Script will now run automatically every day at 4:30 PM.")
+        print("  Script will now run automatically every day at 11:30 PM.")
         print('  Verify with: schtasks /query /tn "SwingLab Daily Close"')
     else:
         print(f"✗ Failed: {result.stderr.strip()}")
