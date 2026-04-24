@@ -46,7 +46,7 @@ class DataDownloader:
                 break
 
         if not all_results:
-            raise ValueError(f"No data returned for {symbol}.")
+            return pd.DataFrame()  # No new candles yet (market not open, holiday, or no new data)
 
         df = pd.DataFrame(all_results)
         df = df.rename(columns={"o": "Open", "h": "High", "l": "Low", "c": "Close", "v": "Volume", "t": "Datetime"})

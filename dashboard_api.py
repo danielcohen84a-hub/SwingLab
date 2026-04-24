@@ -6,6 +6,7 @@ from datetime import timedelta
 from typing import Dict, Any
 
 from src.DBManager import DBManager
+from src.DataProcessor import SwingProcessor
 
 app = FastAPI(title="SwingLab Dashboard API")
 
@@ -81,8 +82,9 @@ def get_chart_data(prediction_id: int) -> Dict[str, Any]:
     """
     Returns all data needed to render a PlotlyOracle-style chart for a single prediction:
       - candles: windowed OHLCV around the entry time
-      - zigzag: swing segment zig-zag points
-      - prediction: the raw prediction fields (entry price, return, duration, target)
+      - context_zigzag: the last 11 swing segments used for prediction
+      - other_zigzag: the rest of the recent swing segments
+      - prediction: the raw prediction fields
     """
     db = get_db_manager()
 
@@ -92,74 +94,81 @@ def get_chart_data(prediction_id: int) -> Dict[str, Any]:
         raise HTTPException(status_code=404, detail="Prediction not found")
 
     ticker = pred['ticker']
-    # Use entry_extremum_time as chart anchor; show 6 weeks before and predicted_duration_bars after
     try:
         anchor = pd.to_datetime(pred['entry_extremum_time'])
     except Exception:
         anchor = pd.to_datetime(pred['segment_start_time'])
 
-    window_start = anchor - timedelta(weeks=6)
-    window_end   = anchor + timedelta(hours=pred['predicted_duration_bars'] * 1.5 + 100)
+    # 2. Fetch full raw data to calculate accurate segments
+    raw_df = db.get_raw_stock_data(ticker)
+    if raw_df.empty:
+        raise HTTPException(status_code=404, detail="No raw data found for ticker")
+        
+    if 'Datetime' not in raw_df.columns and raw_df.index.name == 'Datetime':
+        raw_df = raw_df.reset_index()
 
-    with db._get_connection() as conn:
-        # 2. Fetch windowed OHLCV candles
-        candles_df = pd.read_sql_query(
-            '''SELECT datetime, open, high, low, close, volume
-               FROM raw_stock_data
-               WHERE symbol = ?
-                 AND datetime >= ?
-                 AND datetime <= ?
-               ORDER BY datetime ASC''',
-            conn,
-            params=[ticker, str(window_start), str(window_end)],
-        )
-
-        # 3. Fetch swing segments in the same window
-        segs_df = pd.read_sql_query(
-            '''SELECT t_start, t_end, swing_return
-               FROM segments
-               WHERE symbol = ?
-                 AND t_start >= ?
-                 AND t_end   <= ?
-               ORDER BY t_start ASC''',
-            conn,
-            params=[ticker, str(window_start), str(window_end)],
-        )
-
-    # 4. Build zig-zag price list – we need price_start / price_end.
-    # They aren't stored in segments, but we can reconstruct them from candles.
-    candles_df['datetime'] = pd.to_datetime(candles_df['datetime'])
-    if not candles_df.empty and not segs_df.empty:
-        # Map each segment endpoint to the closest candle close price
+    # 3. Generate segments
+    processor = SwingProcessor()
+    segs_df = processor.generate_segments(raw_df)
+    
+    if not segs_df.empty:
         segs_df['t_start'] = pd.to_datetime(segs_df['t_start'])
-        segs_df['t_end']   = pd.to_datetime(segs_df['t_end'])
+        segs_df['t_end'] = pd.to_datetime(segs_df['t_end'])
 
-        def nearest_close(ts):
-            idx = (candles_df['datetime'] - ts).abs().idxmin()
-            return float(candles_df.loc[idx, 'close'])
-
-        zigzag_points = []
-        for _, seg in segs_df.iterrows():
-            if not zigzag_points:
-                zigzag_points.append({
-                    "t": seg['t_start'].isoformat(),
-                    "price": nearest_close(seg['t_start'])
-                })
-            zigzag_points.append({
-                "t": seg['t_end'].isoformat(),
-                "price": nearest_close(seg['t_end'])
-            })
+    # 4. Find the context segments (last 11 ending at or before anchor)
+    if not segs_df.empty:
+        context_segs = segs_df[segs_df['t_end'] <= anchor].tail(11)
     else:
-        zigzag_points = []
+        context_segs = pd.DataFrame()
 
-    # 5. Serialize candles
+    if not context_segs.empty:
+        first_context_t = pd.to_datetime(context_segs.iloc[0]['t_start'])
+        window_start = first_context_t - timedelta(days=5)
+    else:
+        window_start = anchor - timedelta(weeks=6)
+
+    window_end = anchor + timedelta(hours=pred['predicted_duration_bars'] * 1.5 + 100)
+
+    # 5. Filter candles to window
+    raw_df['Datetime'] = pd.to_datetime(raw_df['Datetime'])
+    candles_df = raw_df[(raw_df['Datetime'] >= window_start) & (raw_df['Datetime'] <= window_end)]
+
+    # 6. Build zig-zag points
+    context_zigzag = []
+    for _, seg in context_segs.iterrows():
+        if not context_zigzag:
+            context_zigzag.append({
+                "t": seg['t_start'].isoformat(),
+                "price": float(seg['price_start'])
+            })
+        context_zigzag.append({
+            "t": seg['t_end'].isoformat(),
+            "price": float(seg['price_end'])
+        })
+
+    other_zigzag = []
+    if not segs_df.empty:
+        # Future segments (after anchor)
+        future_segs = segs_df[(segs_df['t_start'] >= anchor) & (segs_df['t_start'] <= window_end)]
+        for _, seg in future_segs.iterrows():
+            if not other_zigzag:
+                other_zigzag.append({
+                    "t": seg['t_start'].isoformat(),
+                    "price": float(seg['price_start'])
+                })
+            other_zigzag.append({
+                "t": seg['t_end'].isoformat(),
+                "price": float(seg['price_end'])
+            })
+
+    # 7. Serialize candles
     candles_out = [
         {
-            "t": row['datetime'].isoformat(),
-            "o": row['open'],
-            "h": row['high'],
-            "l": row['low'],
-            "c": row['close'],
+            "t": row['Datetime'].isoformat(),
+            "o": float(row['Open']),
+            "h": float(row['High']),
+            "l": float(row['Low']),
+            "c": float(row['Close']),
         }
         for _, row in candles_df.iterrows()
     ]
@@ -167,7 +176,8 @@ def get_chart_data(prediction_id: int) -> Dict[str, Any]:
     return {
         "ticker": ticker,
         "candles": candles_out,
-        "zigzag": zigzag_points,
+        "context_zigzag": context_zigzag,
+        "other_zigzag": other_zigzag,
         "prediction": {
             "entry_time":        str(pred.get('segment_start_time', pred.get('entry_extremum_time'))),
             "entry_price":       pred['price_at_prediction'],

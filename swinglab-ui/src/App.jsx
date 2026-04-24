@@ -29,7 +29,7 @@ function ChartModal({ predictionId, ticker, onClose }) {
       if (!res.ok) throw new Error(`API returned ${res.status}`);
       const data = await res.json();
 
-      const { candles, zigzag, prediction } = data;
+      const { candles, context_zigzag, other_zigzag, prediction } = data;
 
       if (!candles || candles.length === 0) {
         throw new Error('No OHLCV data found in DB for this ticker. The chart requires raw_stock_data to be populated.');
@@ -49,14 +49,25 @@ function ChartModal({ predictionId, ticker, onClose }) {
         opacity: 0.75,
       };
 
-      // --- Trace 2: Zig-zag swing segments ---
-      const zigzagTrace = zigzag.length > 0 ? {
+      // --- Trace 2a: Context Zig-zag swing segments ---
+      const contextZigzagTrace = (context_zigzag && context_zigzag.length > 0) ? {
         type: 'scatter',
-        x: zigzag.map(z => z.t),
-        y: zigzag.map(z => z.price),
+        x: context_zigzag.map(z => z.t),
+        y: context_zigzag.map(z => z.price),
         mode: 'lines+markers',
-        name: 'Swing Segments',
-        line: { color: '#FBBF24', width: 3 },
+        name: 'Context Segments (Input)',
+        line: { color: '#C084FC', width: 3 }, // Purple for context
+        marker: { size: 8, symbol: 'diamond', color: '#C084FC' },
+      } : null;
+
+      // --- Trace 2b: Other Zig-zag swing segments ---
+      const otherZigzagTrace = (other_zigzag && other_zigzag.length > 0) ? {
+        type: 'scatter',
+        x: other_zigzag.map(z => z.t),
+        y: other_zigzag.map(z => z.price),
+        mode: 'lines+markers',
+        name: 'Recent Swings',
+        line: { color: '#FBBF24', width: 3 }, // Amber
         marker: { size: 8, symbol: 'diamond', color: '#FBBF24' },
       } : null;
 
@@ -109,7 +120,8 @@ function ChartModal({ predictionId, ticker, onClose }) {
       };
 
       const traces = [candlestick, predTrace];
-      if (zigzagTrace) traces.splice(1, 0, zigzagTrace);
+      if (otherZigzagTrace) traces.splice(1, 0, otherZigzagTrace);
+      if (contextZigzagTrace) traces.splice(1, 0, contextZigzagTrace);
 
       const layout = {
         title: {
@@ -335,9 +347,11 @@ function App() {
               <table className="data-table">
                 <thead>
                   <tr>
+                    <th>#</th>
+                    <th>ID</th>
                     <th>Status</th>
                     <th>Ticker</th>
-                    <th>Entry Date</th>
+                    <th>Predicted At</th>
                     <th>Entry Price</th>
                     <th>Pred Return</th>
                     <th>Duration</th>
@@ -348,10 +362,10 @@ function App() {
                 <tbody>
                   {filteredPredictions.length === 0 ? (
                     <tr>
-                      <td colSpan="8" className="empty-state">No predictions found matching filters.</td>
+                      <td colSpan="10" className="empty-state">No predictions found matching filters.</td>
                     </tr>
                   ) : (
-                    filteredPredictions.map((row) => {
+                    filteredPredictions.map((row, index) => {
                       const isOpen = row.actual_return === "";
                       const isWin  = !isOpen && row.direction_correct === 1;
                       
@@ -362,6 +376,8 @@ function App() {
                           onClick={() => setSelectedPrediction(row)}
                           title="Click to view prediction chart"
                         >
+                          <td className="text-muted text-sm">{index + 1}</td>
+                          <td className="text-muted text-sm" style={{ fontFamily: 'monospace' }}>{row.prediction_id}</td>
                           <td>
                             {isOpen ? (
                               <span className="badge badge-live">
@@ -375,10 +391,15 @@ function App() {
                           </td>
                           <td className="font-bold">
                             {row.ticker}
-                            {row.is_bootstrap === 1 && <span className="text-xs text-muted ml-1">(B)</span>}
                           </td>
                           <td className="text-muted text-sm">
-                            {new Date(row.segment_start_time).toLocaleDateString()}
+                            {new Date(row.predicted_at).toLocaleString(undefined, {
+                              year: 'numeric',
+                              month: 'short',
+                              day: 'numeric',
+                              hour: '2-digit',
+                              minute: '2-digit'
+                            })}
                           </td>
                           <td>${parseFloat(row.price_at_prediction).toFixed(2)}</td>
                           

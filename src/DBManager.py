@@ -270,7 +270,7 @@ class DBManager:
             conn.execute('''
                 INSERT INTO load_tracking (symbol, window_start, window_end)
                 VALUES (?, ?, ?)
-            ''', (symbol, window_start, window_end))
+            ''', (symbol, str(window_start), str(window_end)))
             conn.commit()
 
     def insert_segments(self, symbol, segments_df):

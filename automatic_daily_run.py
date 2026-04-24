@@ -99,7 +99,7 @@ def setup_scheduler():
     cmd = (
         f'schtasks /create /tn "SwingLab Daily Close" '
         f'/tr "\\"{python_path}\\" \\"{script_path}\\"" '
-        f'/sc daily /st 23:30 /du 0002:00 /f'
+        f'/sc daily /st 23:30 /f'
     )
     print("Registering Windows Task Scheduler task...")
     print(f"Command: {cmd}\n")
